@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <title>Devsomnia H2</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./style.css">
@@ -13,7 +12,7 @@
   <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li><a href="h1.html" style="color:black">H1</a></li>
+          <li><a href="index.html" style="color:black">H1</a></li>
           <li><a href="h2.html" style="color:black">H2 </a></li>
           <li><a href="h3.html" style="color:black">H3 </a></li>
           <li><a href="h4.html" style="color:black">H4 </a></li>
@@ -22,6 +21,8 @@
       </div>
   </nav>
   
+  <div class="w3-container">
+
   <table class="table">
     <H1>Csoport tagjai, struktúrája</H1>
     <thead>
@@ -53,6 +54,275 @@
       </tr>
     </tbody>
   </table>
-</div>
+
+
+<div>
+	<H1>Tartalomjegyzék</H1>
+    <tbody>
+		<b><a href="#1">1. Bevezetés</a></b><BR>
+		<b><a href="#2">2. Az alkalmazás helye</a></b><BR>
+		<b><a href="#2.1" class="tab">2.1. Üzleti lehetőségek</a></b><BR>
+		<b><a href="#2.2" class="tab">2.2. A probléma megfogalmazás</a></b><BR>
+		<b><a href="#2.3" class="tab">2.3. Az elkészült termék helye</a></b><BR>
+		<b><a href="#3">3. Érintettek és felhasználók</a></b><BR>
+		<b><a href="#3.1" class="tab">3.1. Az érintettek és a felhasználók összefoglalása</a></b><BR>
+		<b><a href="#3.2" class="tab">3.1. Felhasználói környezet</a></b><br>
+		<b><a href="#3.3" class="tab">3.2. Illetékesek adatai</a></b><BR>
+		<b><a href="#3.4" class="tab">3.1. Felhasználók adatai</a></b><BR>
+		<b><a href="#4">4. A végtermék áttekintése</a></b><BR>
+		<b><a href="#4.1" class="tab">4.1. A termék kapcsolatai</a></b><BR>
+		<b><a href="#4.2" class="tab">4.2. A termék használatának előnyei</a></b><BR>
+		<b><a href="#4.3" class="tab">4.3. Feltételezések és függőségek</a></b><BR>
+		<b><a href="#4.4" class="tab">4.4. Költségbecslés</a></b><BR>
+		<b><a href="#4.5" class="tab">4.5. Installáció</a></b><BR>
+		<b><a href="#5">5. A végtermék jellemzői, biztosított szolgáltatások</a></b><BR>
+		<b><a href="#6">6. Korlátozások</a></b><BR>
+		<b><a href="#7">7. Minőségi elvárások</a></b><BR>
+		<b><a href="#8">8. Dokumentációkkal kapcsolatos követelmények</a></b><BR>
+		<b><a href="#9">9. Kockázat lista</a></b><BR>
+    <b><a href="#10">10. Szótár</a></b>
+    </tbody>
+  </div>
+  
+  <H1 id="1">1.Bevezetés</H1>
+ 
+  <div>Az általunk készült program egy felső nézetes bullet hell videojáték szoftver. A [NÉV] nevű játékunk célja az, hogy a „Hardcore” játékosok képességét tesztelje/feszegesse már közel abszurd nehézségekkel.</div><br>
+
+  <div>
+    <H1 id="2">2. Az alkalmazás helye</H1><br>
+    <H3 id="2.1">2.1 Üzleti lehetőségek</H3>   
+      <div>A játék a videojáték iparban forgalmazható/adható el.</div>
+
+    <H3 id="2.2">2.2 A probléma megfogalmazása</H3>   
+      <div>A játék nehézségével megfélemlítheti a „Casual” játékosokat, amivel csökkenhet az érdeklődés a játék iránt így nehezebben eladható. A játék teljes kiismerésére szánt idő többszörösére nőhet ezért fontos az egyszerűség. (többjátékos játékoknál ez kifejezetten probléma)</div><br>
+
+    <H3 id="2.3">2.3 Az elkészült termék helye</H3>   
+      <div>Szoftverünk a már ebben a kategóriában jártas embereknek készül és valamilyen játék árusító cégnél vagy platformnál tervezzük reklámozni/árusítani. A mi programunk attól különbözik a zsánerében lévő többi játéktól, hogy alapvetően egyszerűen megérthető, viszont tisztán megkülönböztethető egy jó játékos egy újtól. Azzal hogy nehéz a játék még akár egy pálya kivitele vagy főellenség legyőzése is hatalmas sikerélménnyel zárulhat.</div><br>
+  </div>
+
+  <div>
+		<H1 id="3">3. Érintettek és felhasználók</H1><br>
+	  <H3 id="3.1">3.1 Az érintettek és a felhasználók összefoglalása</H3>
+    <h4><b>Érintettek</b></h4>
+      <div>Az előzőekben már említett projekt nem jöhetne életre a megfelelő emberek nélkül. A játék projecteknél szint úgy mint más nagyobb volumenű munkáknál az érintetteknek elengedhetetlen létfontosságú feladataik vannak. Nézzük végik milyen feladatok is ezek:</div>
+	    
+      <div><b>Vezető programozó:</b> A vezető programozó feladata a többi programozó által készített kódok követése megértése és a fő rendszerbe való implementálása. Szerepe az egyes kompatibilitási problémák megoldása is az ő feladatkörébe tartozik, legyen szó két script közötti problémák miatt létrejött error-ról szó vagy implementálási nehézségről. 
+        Általában az előbb említetteken kívül az vezető programozó saját maga is dolgozik scripteken,funkciókon és más fontos kódokon. 
+      </div><br>
+		
+      <div><b>Programozó:</b> A programozó feladata a project egyes szegmenseihez szükséges kód elkészítése. Szerepe az előre megbeszélt rendszerben a megfelelő konvenciók alapján a project egyes funkcióinak elkészítése és hibatesztelése a feladata.</div><br>
+
+      <div><b>Director/Project vezető:</b> A director feladata hogy a project az eredeti vízió szerint haladjon. Az ő szerepe hogy aktívan és részletesen elmagyarázza a csapatnak a project tervét annak apró finom részleteivel együtt. Majd mikor már a készítési fázisba lépnek aktív megfigyelőként reagál és reflektál az elkészült elemekre.</div><br>
+
+      <div><b>Vezető designer:</b> A vezető designer feladata a project vizuális elemeinek összekalibrálása, főbb set piece-ek elkészítése és a Direktor elképzeléseinek vizuális implementálása. Szerepe általában több designerrel együtt dolgozva életre hozni a project világát.</div><br>
+
+      <div><b>Designer:</b> A designer feladat a project vizuális elemeinek elkészítése. Szerepe a textúrák megrajzolása, karakterek koncepciójának elkészítése majd megvalósítása, pálya assetek elkészítése és más grafikai elemek létrehozása.</div><br>
+
+      <div><b>Hangmérnök:</b> A designer feladat a project vizuális elemeinek elkészítése. Szerepe a textúrák megrajzolása, karakterek koncepciójának elkészítése majd megvalósítása, pálya assetek elkészítése és más grafikai elemek létrehozása.</div><br>
+
+      <div><b>Webmester:</b> A webmester feladata a weblap elkészítése és annak karbantartása. Szerepe a weblap bejegyséze a szolgáltatónál, elkészítése és feltöltése a megfelelő tartalmakkal. Ezen túl feladata a weblap naprakész legyen.</div><br>
+
+      <div><b>Teszter:</b> A teszer feladata a termék egyes fázisai illetve a kész termék letesztelése. Szerepe az hogy a terméket letesztelje és megkeresse az esetleges hibákat és nem jól működő rendszereket majd ezekel lejelentse a készítők felé. Általában ebbe beletartozik a termék nem megfelelő használata és a töréspontig kitolni a terméket. </div><br>
+      
+      <h4><b>Felhasználók</b></h4>
+
+	    <div><b>Játékosok:</b> A project felhasználói és legfőbb célcsoportja a játékosok. Ők az általános felhasználók és fogyasztók. A fejlesztés során ők a teszterek formájában vannak reprezentálva.</div><br>
+	    
+      <div><b>Modderek:</b> A modderek egy kisebb csoportja a játékosoknak akik saját ötleteikkel és képességeikkel a játékot „Moddolják”. A termék fenmaradásához nem szükségesek ámde nagyban hozzá tudnak járulni a játék köré gyűlő játékosok megtartásában és az érdeklődésük fentartásában. Ők a programozók és teszterek formájában vannak reprezentálva.</div><br>
+
+	<H3 id="3.2">3.2 Felhasználói környezet</H3>
+	<div>A projectünk windows alatt fog futni de esetleges kibővítés más operációs rendszerekre és platformokra is elképzelhető. A játék egy single player ennek köszönhetően nem kell a több felhasználó okozta nehézségekkel foglalkozni. A játék tervezett hossza 5 óra pályánként 10 perc annak érdekében hogy a játék ne igényeljen sok időt ha az ember csak gyorsan ki szeretne kapcsolódni. Ez az 5 óra 30 pályát foglal magába ami a fő történet. Ezen kívül más más kihívások és játékmódok is elérhetőek. Ezeknek tudatában nagyon változó hogy a felhasználó mennyi ideig fogja használni az alkalmazást. A kész termék nem fog nagy hardware igénnyel rendelkezni annak következtében hogy az elérhetőség egy fontos szempont. Ugyan ezen indokok miatt egyéb különleges körülményekkel nem kell számolni.
+    A terméket a Steam nevezetű alakalmazás maneger és megosztó platform segítségével fogjuk a számítógépes platformokon árusítani és amennyiben történik kiterjesztés más platformokra 
+    (Konzolok, mobil) abban az esetben a platformok saját alkalmazás letöltő felületein lesz elérhető a játék.
+  </div><br>
+
+	<H3 id="3.3">3.3 Illetékesek adatai</H3>
+	<table class="table">
+    <H1>Csoport tagjai, struktúrája</H1>
+    <thead>
+      <tr>
+        <th>Tagok</th>
+        <th>Neptun</th>
+        <th>Email</th>
+        <th>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bordás Milán</td>
+        <td>WJB0DC</td>
+        <td>##########</td>
+        <td>##########</td>
+      </tr>      
+      <tr>
+        <td>Kriston Ádám</td>
+        <td>SYQ7E2</td>
+        <td>##########</td>
+        <td>##########</td>
+      </tr>
+      <tr>
+        <td>Kamarás Erik</td>
+        <td>EN4B5K</td>
+        <td>##########</td>
+        <td>##########</td>
+      </tr>
+      <tr>
+        <td>Pogácsás Benedek</td>
+        <td>FM4Z3B</td>
+        <td>##########</td>
+        <td>##########</td>
+      </tr>
+      <tr>
+        <td>Bártfai Bálint</td>
+        <td>NWTTCA</td>
+        <td>##########</td>
+        <td>##########</td>
+      </tr>
+    </tbody>
+  </table>
+
+	<H3 id="3.4">3.4 Felhasználók adatai</H3>
+	<div>Felhasználókkal szemben nem lesz lényeges adat gyűjtés. Az egyetlen terület amiben felhasználói adat gyűjtve lesz az a játék stílus.</div>
+	</div>
+	
+	
+	
+	<div>
+		<H1 id="4">4. A végtermék áttekintése</H1><br>
+		
+	<H3 id="4.1">4.1 A termék kapcsolatai</H3>
+    <div>A termék 2 fő részből áll: a konkrét játék és a pontregisztráló szerver. A pontregisztráló rendszer azért lényeges mert a játékban szerzett pontokat és ez alapján a ranglistát valós időben lehet látni. Ezen felül fontos megemlíteni a Steam platformot mivel ezen lesz elérhető a játék. Nem elhanyagolható még az sem hogy a platform egy teljesítmény követő rendszert is tud adni a játéknak.</div>
+	
+		<div>
+		<b>A termék funkcionális komponensei:</b>
+		<tbody>
+      <ul>	
+        Regisztrált felhasználók nyilvántartása</li>
+	    <li>Adatok védelme</li>
+		 <li>Support</li>
+		  <li>Felhasználói jogosultságok</li>
+       </ul>
+    </tbody>
+		</div>
+	
+	<H3 id="4.2">4.2. A termék használatának előnyei</H3>
+	<div>
+	
+      <div>
+      <b>A finommotoros készség fejlesztése:</b>
+      <div>A játék nehézsége miatt kényszerít a finommotoros mozgások gyakorlására és a készség fejlesztésére.</div>
+        <tbody>
+          <ul>	
+            <li>Helyenként keskeny menekülési útvonalak és a nem túl megbocsájtó játékmenet</li>
+            <li>Ellenfelek támadási mintái</li>
+          </ul>
+        </tbody>
+      </div>
+
+      <div>
+        <b>A történet:</b>
+        <div>A játék rendelkezik saját történetével ami egy űrhajó kapitányának a székébe ültet minket. Ahol felfedezzük a galaxist és megállítjuk a közelgő gonoszt egy kalandos és csavaros 
+          Sci-fi történet keretében.
+          </div>
+          <tbody>
+            <ul>	
+              <li>30 epizódos történet</li>
+              <li>Cutscene-ek és vizuális történet mesélés</li>
+            </ul>
+          </tbody>
+        </div>
+
+        <div>
+          <b>Kihívás és izgalom:</b>
+          <div>A játék nem könnyű ámde a győzelmek annál édesebbek. Az alap történet egyenletesen nehezedik és a kihívás pályák nem kegyelmeznek a játékosnak.</div>
+            <tbody>
+              <ul>	
+                <li>Alap kampány</li>
+                <li>Kihivás pályák a saját top listájukkal</li>
+              </ul>
+            </tbody>
+          </div>
+
+          <div>
+            <b>Káosz átlátása:</b>
+            <div>A játék rengetegszer káoszba fajul köszönhetően a rengeteg lövöldözésnek a képernyőn ezért a nehez szinteken fontos a káosz átlátásának elsajátítása. Ebben a játék sokat tud segíteni.</div>
+              <tbody>
+                <ul>	
+                  <li>Különböző akár random lövési minták az ellenfelektől</li>
+                  <li>Erős szín kontraszt és más segítségek a megkülönböztetés érdekében</li>
+                </ul>
+              </tbody>
+            </div>
+	</div>
+	
+	<H3 id="4.3">4.3. Feltételezések és függőségek</H3><br>
+  <div>
+      <tbody>
+        <ul>	
+          <li>1.	Windows operációs rendszer</li>
+          <li>2.	Steam alkalmazás lent léte és használata</li>
+          <li>3.	Pont tároló szerver megléte és működése</li>
+          <li>4.	Internet</li>
+          <li>5.	Hardware</li>
+        </ul>
+      </tbody>
+    </div>
+	<H3 id="4.4">4.4 Költségbecslés</H3>
+	<table class="table">
+    <H1>Csoport tagjai, struktúrája</H1>
+    <thead>
+      <tr>
+        <th>Egyszeri:</th>
+        <th>Többszöri:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Steam License: 100$</td>
+        <td>Fizetések: 4000$-10000$</td>
+      </tr>      
+      <tr>
+        <td>Külsős zene komponáló: 200$-1000$</td>
+        <td>Software: 400$</td>
+      </tr>
+      <tr>
+        <td>Jogvédés: 1000$</td>
+        <td>Külsős designer: 300$</td>
+      </tr>
+      <tr>
+        <td>5000$-12000$</td>
+      </tr>
+    </tbody>
+  </table>
+	
+	<H3 id="4.5">4.5. Installáció</H3>
+	<div>Szükséges 500mb Hdd hely és a Steam alakalmazás</div>
+	
+
+
+
+
+
+  <H1 id="8">8. Dokumentációkkal kapcsolatos követelmények</H1>
+	<div>A H-s sorszámmal ellátott dokumentációk az előre meghatározott időpontban .html formátumban fognak megjelenni.
+    Célja hogy projekt haladása rendszerezve, nyomon követhető legyen.
+    A weblapon elérhető a munkanapló is ami szintén szabvány .html formátumban lesz. Ezen keresztül lehet végig követni hogy a projekt készítésekor ki mit és hogyan csinált meg és hogy erre mennyi időt fordított.
+    A játék saját weblapján Dev Diary-t készítünk hogy a jövőbeli játékosok nyomon tudják követni a játék fejlesztését és hogy kitudják a véleményüket fejezni a lehetséges új tartalmakról és változtatásokról.
+    Ezen felül Patch Notes formában értesítenénk a játékosokat ha valamilyen új változást kiviteleztünk a játékban.
+    </div>
+
+  </div>
+
+
+  <H1 id="10">10. Szótár</H1>
+  <div>
+    <ul>
+      <li>Hardcore játékosok - Olyan játékosok akik nagyon komolyan veszik a játékot</li>
+      <li>Casual játékosok - Átlagos játékos</li>
+      <li>Support - Támogató</li>
+      <li>Dev Diary - Fejlesztői napló</li>
+      <li>Patch Notes - Frissítési jegyzetek</li>
+    </ul>
+  </div>
 </body>
 </html>
