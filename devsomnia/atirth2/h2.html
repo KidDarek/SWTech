@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Devsomnia H2</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./style.css">
+</head><body>
+<nav class="navbar navbar-default">
+</nav><div class="container-fluid">
+<ul class="nav navbar-nav">
+<li><a href="h1.html" style="color: black;">H1</a></li>
+<li><a href="h2.html" style="color: black;">H2 </a></li>
+<li><a href="h3.html" style="color: black;">H3 </a></li>
+<li><a href="h4.html" style="color: black;">H4 </a></li>
+<li><a href="h5.html" style="color: black;">H5 </a></li>
+</ul> </div>
+
+<div class="w3-container">
+<table class="table">
+<h1>Csoport tagjai, struktúrája</h1>
+<thead>
+<tr>
+<th>Tagok</th>
+<th>Neptun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bordás Milán</td>
+<td>WJB0DC</td>
+</tr> <tr>
+<td>Kriston Ádám</td>
+<td>SYQ7E2</td>
+</tr>
+<tr>
+<td>Kamarás Erik</td>
+<td>EN4B5K</td>
+</tr>
+<tr>
+<td>Pogácsás Benedek</td>
+<td>FM4Z3B</td>
+</tr>
+<tr>
+<td>Bártfai Bálint</td>
+<td>NWTTCA</td>
+</tr>
+</tbody>
+</table>
+<div>
+<h1>Tartalomjegyzék</h1>
+
+<b><a href="#1">1. Bevezetés</a></b><br>
+<b><a href="#2">2. Az alkalmazás helye</a></b><br>
+<b><a href="#2.1" class="tab">2.1. Üzleti lehet&#337;ségek</a></b><br>
+<b><a href="#2.2" class="tab">2.2. A probléma megfogalmazás</a></b><br>
+<b><a href="#2.3" class="tab">2.3. Az elkészült termék helye</a></b><br>
+<b><a href="#3">3. Érintettek és felhasználók</a></b><br>
+<b><a href="#3.1" class="tab">3.1. Az érintettek és a felhasználók összefoglalása</a></b><br>
+<b><a href="#3.2" class="tab">3.1. Felhasználói környezet</a></b><br>
+<b><a href="#3.3" class="tab">3.2. Illetékesek adatai</a></b><br>
+<b><a href="#3.4" class="tab">3.1. Felhasználók adatai</a></b><br>
+<b><a href="#4">4. A végtermék áttekintése</a></b><br>
+<b><a href="#4.1" class="tab">4.1. A termék kapcsolatai</a></b><br>
+<b><a href="#4.2" class="tab">4.2. A termék használatának el&#337;nyei</a></b><br>
+<b><a href="#4.3" class="tab">4.3. Feltételezések és függ&#337;ségek</a></b><br>
+<b><a href="#4.4" class="tab">4.4. Költségbecslés</a></b><br>
+<b><a href="#4.5" class="tab">4.5. Installáció</a></b><br>
+<b><a href="#5">5. A végtermék jellemz&#337;i, biztosított szolgáltatások</a></b><br>
+<b><a href="#6">6. Korlátozások</a></b><br>
+<b><a href="#7">7. Min&#337;ségi elvárások</a></b><br>
+<b><a href="#8">8. Dokumentációkkal kapcsolatos követelmények</a></b><br>
+<b><a href="#9">9. Kockázat lista</a></b><br>
+<b><a href="#10">10. Szótár</a></b>
+
+</div>
+<h1 id="1">1.Bevezetés</h1>
+<div>Az általunk készült program egy fels&#337; nézetes bullet hell
+videojáték szoftver. Fels&#337; nézetes, mert a játékos perspektívája egy
+fix pozícióban van a karaktere fölött. A bullet hell játéktípusú
+játékok jellemz&#337;je pedig az, hogy a képerny&#337; nagy része a játék során
+különböz&#337; tulajdonságú úgynevezett &#8222;töltényekkel&#8221; van tele, amit a
+játékosnak ki kell kerülnie a továbbhaladáshoz. Ezek a játékok gyors
+reakcióid&#337;t és sok tapasztalatot igényelnek. A játékunk célja az, hogy
+a &#8222;Hardcore&#8221; játékosok képességét-kifejezetten a játék során szükséges
+reakcióid&#337;t - javítsa már közel abszurd nehézségekkel.
+</div><br>
+<div>
+<h1 id="2">2. Az alkalmazás helye</h1><br>
+<h3 id="2.1">2.1 Üzleti lehet&#337;ségek</h3> <div>A játék a videojáték
+iparban forgalmazható továbbá értékesíthet&#337;. A játék alapvet&#337;en Windows
+operációs rendszerre készül, de különböz&#337; platformokkal való
+kompatibilitásra is továbbfejleszthet&#337;, mint például a Linux, Android
+és iOS mobil operációs rendszerek.
+Játékunk a 30-50 év közötti korosztályt célozza. Online elérhet&#337;sége
+miatt reklámok használatával szponzorált. A játékosok nagy része ebben
+a korhatárban a régi árkád gépekhez szokott a 90-es években, ahol ezek
+a fajta játékok, mint amit mi készítünk elég gyakoriak és kedveltek
+voltak. Mivel ma már a játékok nagy része online elérhet&#337;, majdnem
+minden ilyen árkád már bezárt. Ezért szeretnénk mi visszahozni azt az
+élményt, amit akkor érezhettek.
+</div>
+<h3 id="2.2">2.2 A probléma megfogalmazása</h3> <div>A régi ilyen
+típusú játékok mind arról ismertek, hogy nehezek, mert általában árkád
+kabinetekbe játszották &#337;ket, ahol egy kisebb összegért fix mennyiség&#369;
+életet (gyakran 3-at) kapott egy játékos. Ennek ugye egyértelm&#369;en a
+célja az volt, hogy minél több pénzt szerezzen a tulajdonosnak a gép.
+Ebb&#337;l kifolyólag a játék nehézségével megfélemlítheti a &#8222;Casual&#8221;
+játékosokat, amivel csökkenhet az érdekl&#337;dés a játék iránt így
+nehezebben eladható. A játék teljes kiismerésére szánt id&#337;
+többszörösére n&#337;het ezért fontos az egyszer&#369;ség. (többjátékos
+játékoknál ez kifejezetten probléma). Ezt mindenképpen szeretnénk
+elkerülni, ezért tervezünk egy informatív bemutató rész elkészítését,
+ami a játék els&#337; indításakor jelenik meg.
+Fontos az is hogy a játék irányítása egyszer&#369;en megérthet&#337; legyen és
+alapjaiban hasonlítson a már létez&#337;, vele azonos típusú játékokhoz. Ha
+túlságosan eltér ezekt&#337;l, akkor azoknál a játékosoknál akik
+tapasztaltabbak és rutinszer&#369;en játszanak, ez akár zavaró tényez&#337; is
+lehet.
+</div><br>
+<h3 id="2.3">2.3 Az elkészült termék helye</h3> <div>Szoftverünk a már
+ebben a kategóriában jártas embereknek készül és valamilyen játék
+árusító cégnél vagy platformnál tervezzük reklámozni/árusítani, esetleg
+szociális platformokon. A mi programunk attól különbözik a zsánerében
+lév&#337; többi játéktól, hogy alapvet&#337;en egyszer&#369;en megérthet&#337;, viszont
+bárki könnyen megkülönböztethet egy jó játékost egy kezd&#337;t&#337;l. Azoknak
+az embereknek a figyelmét akarjuk felkelteni, akik már eléggé jártasak
+az ilyen kategóriában lév&#337; játékokkal, viszont nem akarjuk elijeszteni
+azokat sem, akik esetleg még csak ismerkedés, kezdés képpen próbálják
+ki.
+A játék nehézségére tekintettel &#8211; tapasztalataink szerint - akár egy
+pálya kivitele vagy egy f&#337;ellenség legy&#337;zése is hatalmas sikerélménnyel
+zárulhat. A pályák rövidek, de nehezek. Egy jó játékos akár pár óra
+alatt kiviheti az összes pályát, viszont ha valaki tapasztalatlan,
+akkor egy pálya kiismerése több id&#337;t is igénybe vehet. A pályák azért
+készülnek rövidre, hogy egy próbálkozások között legyen id&#337; szünetre,
+vagy esetleg ha a nincs sok id&#337; a haladásra.
+A csoportunk ebb&#337;l a sikerélményb&#337;l akar maradandó pozitív hatást
+kifejteni a játékosokon azért, hogy legközelebb is visszajöjjenek.
+</div><br>
+</div>
+<div>
+<h1 id="3">3. Érintettek és felhasználók</h1><br>
+<h3 id="3.1">3.1 Az érintettek és a felhasználók összefoglalása</h3>
+<h4><b>Érintettek</b></h4>
+<div>Az el&#337;z&#337;ekben már említett projekt nem jöhetne életre a megfelel&#337;
+emberek nélkül. A játék projecteknél szint úgy mint más nagyobb
+volumen&#369; munkáknál az érintetteknek elengedhetetlen létfontosságú
+feladataik vannak. Nézzük végik milyen feladatok is ezek:</div>
+<div><b>Vezet&#337; programozó:</b> A vezet&#337; programozó feladata a többi
+programozó által készített kódok követése megértése és a f&#337; rendszerbe
+való implementálása. Szerepe az egyes kompatibilitási problémák
+megoldása is az &#337; feladatkörébe tartozik, legyen szó két script közötti
+problémák miatt létrejött error-ról szó vagy implementálási
+nehézségr&#337;l. Általában az el&#337;bb említetteken kívül az vezet&#337; programozó
+saját maga is dolgozik scripteken,funkciókon és más fontos kódokon. </div><br>
+<div><b>Programozó:</b> A programozó feladata a project egyes
+szegmenseihez szükséges kód elkészítése. Szerepe az el&#337;re megbeszélt
+rendszerben a megfelel&#337; konvenciók alapján a project egyes funkcióinak
+elkészítése és hibatesztelése a feladata.</div><br>
+<div><b>Director/Project vezet&#337;:</b> A director feladata hogy a project
+az eredeti vízió szerint haladjon. Az &#337; szerepe hogy aktívan és
+részletesen elmagyarázza a csapatnak a project tervét annak apró finom
+részleteivel együtt. Majd mikor már a készítési fázisba lépnek aktív
+megfigyel&#337;ként reagál és reflektál az elkészült elemekre.</div><br>
+<div><b>Vezet&#337; designer:</b> A vezet&#337; designer feladata a project
+vizuális elemeinek összekalibrálása, f&#337;bb set piece-ek elkészítése és a
+Direktor elképzeléseinek vizuális implementálása. Szerepe általában
+több designerrel együtt dolgozva életre hozni a project világát.</div><br>
+<div><b>Designer:</b> A designer feladat a project vizuális elemeinek
+elkészítése. Szerepe a textúrák megrajzolása, karakterek koncepciójának
+elkészítése majd megvalósítása, pálya assetek elkészítése és más
+grafikai elemek létrehozása.</div><br>
+<div><b>Hangmérnök:</b> A designer feladat a project vizuális elemeinek
+elkészítése. Szerepe a textúrák megrajzolása, karakterek koncepciójának
+elkészítése majd megvalósítása, pálya assetek elkészítése és más
+grafikai elemek létrehozása.</div><br>
+<div><b>Webmester:</b> A webmester feladata a weblap elkészítése és
+annak karbantartása. Szerepe a weblap bejegyséze a szolgáltatónál,
+elkészítése és feltöltése a megfelel&#337; tartalmakkal. Ezen túl feladata a
+weblap naprakész legyen.</div><br>
+<div><b>Teszter:</b> A teszer feladata a termék egyes fázisai illetve a
+kész termék letesztelése. Szerepe az hogy a terméket letesztelje és
+megkeresse az esetleges hibákat és nem jól m&#369;köd&#337; rendszereket majd
+ezekel lejelentse a készít&#337;k felé. Általában ebbe beletartozik a termék
+nem megfelel&#337; használata és a töréspontig kitolni a terméket. </div><br>
+<h4><b>Felhasználók</b></h4>
+<div><b>Játékosok:</b> A project felhasználói és legf&#337;bb célcsoportja a
+játékosok. &#336;k az általános felhasználók és fogyasztók. A fejlesztés
+során &#337;k a teszterek formájában vannak reprezentálva.</div><br>
+<div><b>Modderek:</b> A modderek egy kisebb csoportja a játékosoknak
+akik saját ötleteikkel és képességeikkel a játékot &#8222;Moddolják&#8221;. A
+termék fenmaradásához nem szükségesek ámde nagyban hozzá tudnak járulni
+a játék köré gy&#369;l&#337; játékosok megtartásában és az érdekl&#337;désük
+fentartásában. &#336;k a programozók és teszterek formájában vannak
+reprezentálva.</div><br>
+<h3 id="3.2">3.2 Felhasználói környezet</h3>
+<div>A projectünk windows alatt fog futni de esetleges kib&#337;vítés más
+operációs rendszerekre és platformokra is elképzelhet&#337;. A játék egy
+single player ennek köszönhet&#337;en nem kell a több felhasználó okozta
+nehézségekkel foglalkozni. A játék tervezett hossza 5 óra pályánként 10
+perc annak érdekében hogy a játék ne igényeljen sok id&#337;t ha az ember
+csak gyorsan ki szeretne kapcsolódni. Ez az 5 óra 30 pályát foglal
+magába ami a f&#337; történet. Ezen kívül más más kihívások és játékmódok is
+elérhet&#337;ek. Ezeknek tudatában nagyon változó hogy a felhasználó mennyi
+ideig fogja használni az alkalmazást. A kész termék nem fog nagy
+hardware igénnyel rendelkezni annak következtében hogy az elérhet&#337;ség
+egy fontos szempont. Ugyan ezen indokok miatt egyéb különleges
+körülményekkel nem kell számolni.
+A terméket a Steam nevezet&#369; alakalmazás maneger és megosztó platform
+segítségével fogjuk a számítógépes platformokon árusítani és amennyiben
+történik kiterjesztés más platformokra (Konzolok, mobil) abban az
+esetben a platformok saját alkalmazás letölt&#337; felületein lesz elérhet&#337;
+a játék.
+</div><br>
+<h3 id="3.3">3.3 Illetékesek adatai</h3>
+<table class="table">
+<h1>Csoport tagjai, struktúrája</h1>
+<thead>
+<tr>
+<th>Tagok</th>
+<th>Neptun</th>
+<th>Email</th>
+<th>Telefon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bordás Milán</td>
+<td>WJB0DC</td>
+<td>##########</td>
+<td>##########</td>
+</tr> <tr>
+<td>Kriston Ádám</td>
+<td>SYQ7E2</td>
+<td>##########</td>
+<td>##########</td>
+</tr>
+<tr>
+<td>Kamarás Erik</td>
+<td>EN4B5K</td>
+<td>##########</td>
+<td>##########</td>
+</tr>
+<tr>
+<td>Pogácsás Benedek</td>
+<td>FM4Z3B</td>
+<td>##########</td>
+<td>##########</td>
+</tr>
+<tr>
+<td>Bártfai Bálint</td>
+<td>NWTTCA</td>
+<td>##########</td>
+<td>##########</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3.4">3.4 Felhasználók adatai</h3>
+<div>Felhasználókkal szemben nem lesz lényeges adat gy&#369;jtés. Az
+egyetlen terület amiben felhasználói adat gy&#369;jtve lesz az a játék
+stílus.</div>
+</div>
+<div>
+<h1 id="4">4. A végtermék áttekintése</h1><br>
+<h3 id="4.1">4.1 A termék kapcsolatai</h3>
+<div>A termék 2 f&#337; részb&#337;l áll: a konkrét játék és a pontregisztráló
+szerver. A pontregisztráló rendszer azért lényeges mert a játékban
+szerzett pontokat és ez alapján a ranglistát valós id&#337;ben lehet látni.
+Ezen felül fontos megemlíteni a Steam platformot mivel ezen lesz
+elérhet&#337; a játék. Nem elhanyagolható még az sem hogy a platform egy
+teljesítmény követ&#337; rendszert is tud adni a játéknak.</div>
+<div>
+<b>A termék funkcionális komponensei:</b>
+
+<ul> Regisztrált felhasználók nyilvántartása
+<li>Adatok védelme</li>
+<li>Support</li>
+<li>Felhasználói jogosultságok</li>
+</ul>
+
+</div>
+<h3 id="4.2">4.2. A termék használatának el&#337;nyei</h3>
+<div>
+<div>
+<b>A finommotoros készség fejlesztése:</b>
+<div>A játék nehézsége miatt kényszerít a finommotoros mozgások gyakorlására és a készség fejlesztésére.</div>
+
+<ul> <li>Helyenként keskeny menekülési útvonalak és a nem túl megbocsájtó játékmenet</li>
+<li>Ellenfelek támadási mintái</li>
+</ul>
+
+</div>
+<div>
+<b>A történet:</b>
+<div>A játék rendelkezik saját történetével ami egy &#369;rhajó kapitányának
+a székébe ültet minket. Ahol felfedezzük a galaxist és megállítjuk a
+közelg&#337; gonoszt egy kalandos és csavaros Sci-fi történet keretében.
+</div>
+
+<ul> <li>30 epizódos történet</li>
+<li>Cutscene-ek és vizuális történet mesélés</li>
+</ul>
+
+</div>
+<div>
+<b>Kihívás és izgalom:</b>
+<div>A játék nem könny&#369; ámde a gy&#337;zelmek annál édesebbek. Az alap
+történet egyenletesen nehezedik és a kihívás pályák nem kegyelmeznek a
+játékosnak.</div>
+
+<ul> <li>Alap kampány</li>
+<li>Kihivás pályák a saját top listájukkal</li>
+</ul>
+
+</div>
+<div>
+<b>Káosz átlátása:</b>
+<div>A játék rengetegszer káoszba fajul köszönhet&#337;en a rengeteg
+lövöldözésnek a képerny&#337;n ezért a nehez szinteken fontos a káosz
+átlátásának elsajátítása. Ebben a játék sokat tud segíteni.</div>
+
+<ul> <li>Különböz&#337; akár random lövési minták az ellenfelekt&#337;l</li>
+<li>Er&#337;s szín kontraszt és más segítségek a megkülönböztetés érdekében</li>
+</ul>
+
+</div>
+</div>
+<h3 id="4.3">4.3. Feltételezések és függ&#337;ségek</h3><br>
+<div>
+
+<ul> <li>1. Windows operációs rendszer</li>
+<li>2. Steam alkalmazás lent léte és használata</li>
+<li>3. Pont tároló szerver megléte és m&#369;ködése</li>
+<li>4. Internet</li>
+<li>5. Hardware</li>
+</ul>
+
+</div>
+<h3 id="4.4">4.4 Költségbecslés</h3>
+<table class="table">
+<h1>Csoport tagjai, struktúrája</h1>
+<thead>
+<tr>
+<th>Egyszeri:</th>
+<th>Többszöri:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steam License: 100$</td>
+<td>Fizetések: 4000$-10000$</td>
+</tr> <tr>
+<td>Küls&#337;s zene komponáló: 200$-1000$</td>
+<td>Software: 400$</td>
+</tr>
+<tr>
+<td>Jogvédés: 1000$</td>
+<td>Küls&#337;s designer: 300$</td>
+</tr>
+<tr>
+<td>5000$-12000$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4.5">4.5. Installáció</h3>
+<div>Szükséges 500mb Hdd hely és a Steam alakalmazás</div>
+<h1 id="5">5. A végtermék jellemz&#337;i, biztosított szolgáltatások</h1>
+<div>A játék készítése során els&#337;sorban arra fogunk törekedni, hogy a
+játékmenetet a t&#337;lünk telhet&#337; legjobbra alakítsuk ki. Ez alatt arra
+célzok, hogy a karakterünk mozgása pontos legyen, mindig arra mennyen
+és annyival, amennyivel a játékos szeretett volna. Ezen túl a
+karakterünk, az ellenfelek és a lövedékek &#8220;hitbox&#8221;-ának mérete is
+egyértelm&#369; legyen a játékos számára. Mivel egy ilyen bullet-hell
+játékban a precizitás nagyon fontos, így ezt is pontosan kell
+megjelenítenünk a játékos számára. A játékmenet elkészítése után
+áttérhetünk az általunk elgondolt játékmódokra. Az egyik fontos ilyen
+módunk egy kampány mód, amely során a játékost végig vezetjük egy
+történetvonalon, miközben kihívást kelt&#337; pályákat kell végrehajtania.
+Ezeken több különböz&#337; ellenféllel nézhet majd szembe, és egyes szintek
+végén még egy &#8220;boss&#8221;-al is megütközhetünk. A másik játékmódunk az
+úgynevezett &#8220;arcade&#8221; típusú lesz. Itt már nem egy történet szál vezet
+végig a pályán, hanem ez sokkal inkább a játékmenetre fókuszál. Ebben a
+játékmódban a pályák sokkal több kihívást fognak jelenteni még a
+tapasztaltabb játékosoknak is, mint a kampány során. Ez a játékmód még
+azzal van kiegészítve, hogy a pályák sikeres végrehajtásáért egy
+pontszámot kap a játékos. Ez egy adatbázisba elmenti a játék. Ezeket a
+pontszámokat mások is láthatják, vagy a játékos is látja másokét. </div>
+</div>
+<h1 id="6">6. Korlátozások</h1>
+<div>Az els&#337;dleges korlát a felhasználók készülékeinek a teljesítménye.
+A játék során rengeteg számítást kell elvégeznie a programnak, ugyanis
+tömérdek mennyiség&#369; lövedéket kell megjeleníteni, illetve ezeknek a
+mozgását a lehet&#337; legsimábban kell kezelnie a készüléknek. Nem
+elfelejtend&#337;, hogy minden lövedéknek azt is néznie kell minden egyes
+frame-en, hogy eltalált-e valamit, vagy sem. Így kifejezetten figyelni
+kell ezeknek a kordában tartására, nem haladhat meg egy bizonyos
+mennyiséget a képerny&#337;n lév&#337; lövedékek, ellenfelek száma. <br>Ennek pár reális korlátja:<br>számítógép esetén : <span style="font-weight: bold;">400</span><br>&nbsp;konzol esetén : <span style="font-weight: bold;">250</span><br>&nbsp;mobilkészülék esetén: <span style="font-weight: bold;">150</span><br><span style="text-decoration: underline;">&nbsp;így ennél több csak speciális, ritkán el&#337;forduló esetekben ajánlott.</span><br>További
+korlát még a felhasználók készülékének képerny&#337;jének nagysága / aránya.
+A játékot 16:9-es arányú, illetve megfelel&#337;en nagy ablakban ajánlott
+futtatni. Annak érdekében, hogy a felhasználók precízen tudjanak az
+adott pályán adott karakterrel mozogni, biztosítani kell magának,
+illetve az elkészült játékban is a lehet&#337; legtöbbet megteszünk, hogy ez
+megfelel&#337;en m&#369;ködjön, ne okozzon játékélménybeli változást.<br>&nbsp;A
+játékban nincs kifejezett er&#337;szak, illetve nincs durva beszéd,
+diszkrimináció, félelemkeltés, kábítószer, szerencsejáték vagy feln&#337;tt
+tartalom. Ennek értelmében a játékot minden 12 éven felüli személy
+használhatja, 12 éven aluliaknak gondvisel&#337; / szül&#337; beleegyezése
+szükséges.<br>A többjátékos mód a játék m&#369;fajából, felépítéséb&#337;l
+adódóan nem biztosítható. Erre összesen minimális mennyiségben lehet
+számítani, pl. toplisták, játékosok által készített küldetések, pályák
+publikálásának biztosításával stb.<br>Így lényegében a tényleges valós
+idej&#369; játékot nem szándékozzuk kivitelezni. Ennek különféle fizikai
+korlátok is akadályt jelentenek, pl. a szinkronizálás két eszköz
+között, hiszen a játéknak az élvezhet&#337;ségét az nyújtja, hogy minden
+kifinomultan m&#369;ködik, kis válaszid&#337;vel.<br>A játék ingyenesen elérhet&#337;,
+minden fejl&#337;déshez / el&#337;rehaladáshoz szükséges er&#337;forrás elérhet&#337;
+ingyenesen, prémium kiegészít&#337;k vásárolhatóak alkalmazáson-belüli
+vásárlások révén, de erre a játékmenet során kötelezve senki nincs.
+</div>
+<h1 id="7">7. Min&#337;ségi elvárások</h1>
+<div>A játék az el&#337;írt minimum eszközteljesítmény elérése során
+legalább 45 fps-en kell, hogy fusson, az el&#337;írt ajánlott
+eszközteljesítmény elérése során legalább 60 fps-en. Az eszközöket a
+felhasználóknak kell biztosítaniuk, illetve az el&#337;írások az átlagos
+körülmények között futó játék futására értend&#337;k, hibák és nem
+rendeltetésszer&#369; játékmenetek során ezek eltérhetnek.<br>A játék
+offline jellege miatt a szoftver védelme nem biztosítható teljesen.
+Ennek minden felhasználónak tisztában kell lennie, hogy esetleges
+csalások / módosítások a többi felhasználó esetén el&#337;fordulhatnak, ezt
+nem áll módunkban korlátozni, hiszen az másokat nem hátráltat, nem
+helyez másokat hátrányba.<br>A felhasználók minden esetleges hibát,
+észrevételt a csapatunknak a játékba beépített kapcsolattartó
+platformon jelezhet, a legnagyobb tudásunk szerint nyújtunk segítséget
+a probléma megoldásában. A játékot a t&#337;lünk telhet&#337; módon megpróbáljuk
+a leginkább úgy elkészíteni, hogy az a felhasználóknak kényelmes
+használatot biztosítson.<br>A játékosoknak a kikapcsolódást, az új
+eredmények elérésének vágyát kell biztosítani azzal, hogy megfelel&#337;
+játékélményt biztosít a játék. Az egyik legfontosabb elvárás, hogy a
+felhasználók igényeit kielégítse a játék, illetve, hogy ha ez nem
+valósul meg valamilyen ok miatt, akkor azt fejlesztéssel,
+átgondolásokkal, a játékosok megfigyelései, tippjei alapján elérhessük.
+<table class="table">
+<thead>
+<tr>
+<th>Minimum gépigény:</th>
+<th>Ajánlott gépigény:</th>
+<th>Mobil eszközigények:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU: Intel: Core i3-530 AMD: A6-3650</td>
+<td>CPU: Intel: Core i5-330 AMD: Ryzen 3 1200</td>
+<td>CPU: 2 GHZ 8 Core</td>
+</tr> <tr>
+<td>RAM: 3 GB</td>
+<td>RAM: 4 GB</td>
+<td>RAM: 4 GB</td>
+</tr>
+<tr>
+<td>GPU: NVidia: GeForce 9600GT AMD: HD 6570 Intel: HD 4600 Integrated Graphics, 1GB VRAM</td>
+<td>GPU: NVidia: GeForce 560 AMD: Radeon HD 6950 Intel: UHD 630 Integrated Graphics, 2GB VRAM</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DX: DirectX 10</td>
+<td>DX: DirectX 11</td>
+<td>-</td>
+</tr>
+<tr>
+<td>DX: OS: Win 7, 8 , 10, 11, 32/64 bit</td>
+<td>OS: Win 10, 11, 32/64 bit</td>
+<td>OS: Android 8+, IOS, stb</td>
+</tr>
+<tr>
+<td>STO: 3 GB HDD</td>
+<td>STO: 4 GB SSD</td>
+<td>STO: 500 MB</td>
+</tr>
+<tr>
+<td>RES: 1024x768</td>
+<td>RES: 1920x1080</td>
+<td>Display: 6 inch +</td>
+</tr>
+<tr>
+<td>Konzol ajánlott:</td>
+<td>PS 4, PS 5, XBOX SERIES S-X</td>
+</tr>
+</tbody>
+</table> </div>
+<h1 id="8">8. Dokumentációkkal kapcsolatos követelmények</h1>
+<div>A H-s sorszámmal ellátott dokumentációk az el&#337;re meghatározott
+id&#337;pontban .html formátumban fognak megjelenni.
+Célja hogy projekt haladása rendszerezve, nyomon követhet&#337; legyen.
+A weblapon elérhet&#337; a munkanapló is ami szintén szabvány .html
+formátumban lesz. Ezen keresztül lehet végig követni hogy a projekt
+készítésekor ki mit és hogyan csinált meg és hogy erre mennyi id&#337;t
+fordított.
+A játék saját weblapján Dev Diary-t készítünk hogy a jöv&#337;beli játékosok
+nyomon tudják követni a játék fejlesztését és hogy kitudják a
+véleményüket fejezni a lehetséges új tartalmakról és változtatásokról.
+Ezen felül Patch Notes formában értesítenénk a játékosokat ha
+valamilyen új változást kiviteleztünk a játékban.
+</div>
+</div>
+<h1 id="9">9. Kockázat lista</h1>
+<div>Nehézség meghatározása
+Els&#337; sorban a legnehezebb feladatunk a játék kiegyensúlyozása lesz.
+Mivel szeretnénk egy kihívást jelent&#337; játékot csinálni úgy, hogy ne
+érz&#337;djenek lehetetlennek az egyes pályák végig játszása azoknak a
+játékosoknak, akik újak az ilyen játékhoz. Így a játék minden egyes
+elemét alaposan át kell gondolnunk. Mivel megpróbálunk különféle
+tapasztalattal rendelkez&#337; játékosoknak készíteni a játékot, így nagyon
+könnyen beleeshetünk mindkét extrém szituációba, vagyis vagy túl
+egyszer&#369;re sikerülnek a pályák és nem jelentenek kihívást a
+veteránoknak, vagy túl nehézre sikerülnek, és ezáltal elijesztjük az
+újonnan érkez&#337;ket. Ennek a probléma megoldására két megoldással is
+megtudnánk oldani: </div>
+<ul> <li>Az els&#337; a nehezebb út, amely során a játék egy nehézségi
+szinttel rendelkezik. Így mint ahogy feljebb említettem, alaposan át
+kell gondolnunk mindent. Bár ez a megoldás megvalósítása több
+problémával jár, de az a nagy el&#337;nye, hogy így minden játékost
+egyenl&#337;en kezelünk.</li>
+<li>A másik megoldás a különböz&#337; nehézségi szintek bevezetése lenne.
+Ezzel minden játékos a saját tapasztalatának megfelel&#337;en választhatna
+egy szintet és azon játszana. Ezt megvalósítani egyszer&#369;bb lenne, mégis
+a csapatunk abban egyezett meg, hogy minden er&#337;nkkel azon leszünk, hogy
+az els&#337; megoldást próbáljuk megvalósítani.</li>
+</ul>
+
+<h1 id="10">10. Szótár</h1>
+<div>
+<ul>
+<li>Hardcore játékosok - Olyan játékosok akik nagyon komolyan veszik a játékot</li>
+<li>Casual játékosok - Átlagos játékos</li>
+<li>Support - Támogató</li>
+<li>Dev Diary - Fejleszt&#337;i napló</li>
+<li>Patch Notes - Frissítési jegyzetek</li>
+</ul>
+</div>
+</body></html>

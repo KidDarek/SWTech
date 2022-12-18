@@ -18,10 +18,12 @@
             <li><a href="h3.html" style="color:black">H3 </a></li>
             <li><a href="h4.html" style="color:black">H4 </a></li>
             <li><a href="h5.html" style="color:black">H5 </a></li>
+            <li><a href="szotar.html" style="color:black">Szótár </a></li>
+            <li><a href="/~bordas7/Codes" style="color:black">C# kódok</a></li>
           </ul>	
         </div>
     </nav>
-    
+    <div class="w3-container">
     <table class="table">
       <H1>Csoport tagjai, struktúrája</H1>
       <thead>
@@ -53,6 +55,215 @@
         </tr>
       </tbody>
     </table>
+    <H1 id="1">1. Bevezetés</H1>
+    <div>
+      A Devsomnia Tesztelési dokumentuma
+      <br><a href="/~bordas7/Codes" style="color:blue">A C# állományok megtekinthetőek itt</a>
+    </div>
+    <H1 id="2">2. Tesztelés</H1>
+    <div>
+      <H3>Játék tesztelése</H3>
+      A játék tesztelése a játék fejlesztés egyik legfontosabb lépése ennek segítségével a fejlesztők képesek megtalálni a
+      hibákat, amelyeket a későbbiekben így ki tudnak javítani. Ez a folyamat nagyban hozzájárul a játék minőségéhez ezzel
+      elkerülve azt, hogy a játékosok rossz tapasztalatokat szerezzenek a játékkal kapcsolatban. Mivel, ha a játékosok rossz
+      véleménnyel vannak a játékról az a játék eladás számára nagyban kihat.
+      <H3>A játék értékelésének három főbb változata van:</H3>
+      <H4>Minőségi értékelés</H4>
+      Mivel minden játékfejlesztő a legjobb felhasználói élményt szeretné nyújtani az ügyfeleknek. Az egyik legegyszerűbb
+      módja ennek eléréséhez a képzett játéktesztelők alkalmazása. A tesztelő hatékonyan azonosítja a hibákat.
+      <H4>Videójáték rangsorok</H4>
+      Amikor egy új játék kerül a piacra annak a már meglévő értékelése a tesztelőktől függ. Ebben az esetben a tesztelők
+      paraméterek hosszú sorát veszik figyelembe mielőtt a végső értékelést megadják egy játékról.
+      <H4>A fejlesztési területek azonosítása</H4>
+      Amikor egy videójáték piacra kerül általában még utána is adnak ki frissítéseket hozzá a fejlesztők. A játéktesztelés
+      lehetővé teszi a fejlesztők számára, hogy azonosítsák azokat a területeket, amelyeket javítani kell ahhoz, hogy a
+      játékok hosszú életűek legyenek a piacon. Némely esetekben nem frissítik a játékot, hanem egy új játékot adnak ki, ami
+      igazából ugyan az, mint az előző verziója csak a hibákat javítják ki és egyéb új funkciókat adnak hozzá.
+      <H3>A leggyakoribb játékfejlesztési hibák:</H3>
+      <H4>Interfész hibái: </H4>Ezek olyan hibák, amikkor a játékelemek nem a megfelelő helyen vannak, és a szövegnek szánt
+      hely nem megfelelően illeszkedik. Vagy a játék közben a karakterek textúrája szétesik.
+      <H4>Technikai hibák:</H4> Ezek azok a hibák amikor a játék nem megfelelően működik az instabil internet vagy hálózati
+      kapcsolatok miatt.
+      <H4>Teljesítményhibák:</H4>
+      A játék másodpercenkénti képkocka frissítésének (FPS) a nagymértékű csökkenése vagy ingása a karakterek támadása közben
+      vagy egyéb effektek idején egy csúcs kategóriás számítógépen is. Ez esetben a játék nincsen optimalizálva.
+      <h4>Kompatibilitási hibák</h4> Ezek olyan problémák, amelyek akkor jelentkeznek, amikor a játékok nem működnek
+      megfelelően a különböző eszközökön vagy operációs rendszereken, annak ellenére, hogy platform függetlennek készült.
+      <h4>Egyensúlyi és logikai hibák:</h4> Ezek a hibák nem teszik lehetővé, hogy a játékosok teljesítsék a feladatokat vagy
+      az adott pályát. A játékosok szempontjából ez az egyik legidegesítőbb játékbeli hiba.
+      A játéktesztelés nem csak az általános hibákra hívja fel a figyelmet, hanem a fejlesztők megtudhatják belőle hogy a
+      játékuk élvezetes-e, milyen a nehézsége, könnyen irányítható-e, a játékosoknak vonzó-e a játék dizájnja és hogy van-e
+      igény rá.
+      A többjátékos játékok tesztelése a legnehezebb, különösen akkor, ha a játékosok nagyon különböző helyszíneken és
+      egymástól távol tartózkodnak. A többjátékos funkcióval rendelkező játékokat gyakran nehéz tesztelni és hibakeresést
+      végezni, és olyan problémákból is állhatnak, amelyeket nehéz kijavítani.
+      A legjobb motor kiválasztása egy játékhoz kétségtelenül kihívást jelent a fejlesztők számára, de a minőségbiztosítás
+      számára gyakran még nehezebb, hogy felkészülten tesztelhessék a nekik adott motorok bármelyikét. Figyelembe kell venniük
+      az egyes motorok összes sajátosságát, és zökkenőmentesen kell alkalmazniuk a különböző típusú játékteszteléseket, hogy
+      alaposan ellenőrizhessék azokat.
+      A játék teljesítménye minden más alkalmazásnál többet számít, mivel nagyban hozzájárul a felhasználói élményhez. Ebből a
+      szempontból a másodpercenkénti képkocka frissítés (FPS) mivel ettől függ, hogy a mennyire lesz folyamatos az, amit a
+      játékos lát. Néhány játék olyan érzékelőket vagy más hardverfunkciókat használ, amelyek nem egységesek az egyes
+      eszközökön. Ha ezt nem ellenőrzik, az számos negatív hatást gyakorol az általános teljesítményre. Ez főként mobilos
+      játékoknál fordul elő.
+      <h3> A játékfejlesztés életciklusa: </h3>
+      <ol>
+        <li>Koncepciófejlesztés: Ebben az első fázisban a játék ötlete vagy koncepciója kerül kidolgozásra.</li>
+        <li>Előkészítés: Ez a fázis a koncepció véglegesítését és a koncepció dokumentumának elkészítését foglalja magában.
+        </li>
+        <li>Fejlesztés: Ebben a fázisban a fejlesztők elkészítik a játék kódját. A grafikusok elkezdenek dolgozni a textúrákon
+          és a modelleken.</li>
+        <li>Alfa: Ebben a fázisban a játék már játszható. A fejlesztési folyamat első mérföldköve. Itt már rendelkezik a
+          funkciókkal és teljes játékmentet tartalmaz.</li>
+        <li>Béta: Itt a játék már minden eszközzel teljes kifejlesztése megtörtént.</li>
+        <li>Kód befagyasztás (Code Freeze): A béta során talált hibákat a fejlesztők kijavítják ez után már a kiadás fázisába
+          kerül.</li>
+        <li>Kiadás a gyártáshoz: A játékot kiadják a gyártónak</li>
+        <li>Javítás és frissítés: Miután a játék kikerül, a piacra utána karban kell tartani. Az ekkor felmerülő hibákat ki
+          kell javítani, és a későbbi frissítésekkel egyéb funkciókat és tartalmakat adnak a játékhoz.</li>
+      </ol>
+      <h4>Első tesztelés:</h4> A fejlesztés közben a meglévő részeket tesztelőkkel teszteltetjük, hogy a már kész részek egy
+      ellenőrzésen átessenek. Itt még csak az egyes gombok működését és a funkciók megfelelő működését teszteljük.
+      <h4>Második tesztelés:</h4> A már játszható játékot még az alfa verzió előtt tesztelőkkel teszteltetjük, hogy mire az
+      alfa verzióba ér a játék a nagyobb hibákat már megtaláljuk és kijavítsuk. Itt a fizetett tesztelőknek többször is végig
+      kell játszaniuk egy pályát kipróbálva minden lehetőséget amit egy játékos megcsinálva ezzel fényt derítve az esetleges
+      hibákra.
+      <h4>Alfa verzió tesztelése:</h4> Az Alfa verzió tesztelésében már a jövőbeli játékosok egy kisebb szűk csoportja is
+      részt vesz. Az alfa verzió tesztelésébe azért már játékosok is bevéve mivel akkor már egy nagyobb számú csapat játszik a
+      játékkal és így nagyobb a valószínűsége a hibák felfedezésére. Továbbá e játékosok véleménye fontos lesz a későbbiek
+      során. Mivel ha a véleményük pozitív és ezt tovább adják más játékosoknak is akkor nőni fog a játék felé a kereslet.
+      Azokat a játékosokat, akik az alfa verzió tesztelésében részt vettek még mi válogatjuk ki a jelentkezők közül.
+      <h4>Béta verzió tesztelése:</h4> Az alfa verzió tesztelése utána és a felmerült hibák kijavítása utána elindult a
+      bétatesztelés, amibe már nem csak a kiválogatott játékosoknak nyitjuk meg a kapukat. Hanem minden olyan játékosnak, aki
+      a játékkal szeretne játszani. Ez egy úgynevezett nyílt béta. Mivel itt még több játékos érintkezik, a játékkal a hibák
+      észrevételének valószínűsége még jobban megnő ez által a késztermék még színvonalasabb lesz. Ez a tesztelés nem csak a
+      hibák felkeresésének szempontjából jó hanem ez idő alatt a játékosok ingyen kipróbálhatják a játékot ami ha megtetszik
+      nekik vagy kíváncsiak lesznek hogy a későbbiekben hová fejlődik tovább akkor megfogják venni. Ezzel a bétateszteléssel
+      lehetséges, hogy olyan játékosok figyelmét is felkeltjük, akik eredetileg nem akarták a játékot megvenni.
+      <h4>Piacra kerülés utáni tesztelések:</h4> A játék elindulása utána mikor már kikerült a piacra, a játékosoknak
+      biztosítunk egy teszt játékot, amely tartalmazza azokat a funkciókat, amelyek a későbbiek során bekerülnek majd a
+      játékba, de még le szeretnénk a működésüket tesztelni. A teszt játék nem csak nekünk a fejlesztőknek előnyös, hanem a
+      játékosoknak is mivel a teszt szerveren korlátlan játékbeli pénz elérhető számukra, amivel kedvük szerint kipróbálhatják
+      az űrhajókat és így könnyebben döntést tudnak hozni a valós játékban.
+      A teszt játékon kívül létezni fog még egy tesztjáték, amihez már nem minden játékos fér hozzá csak néhány kiválogatott.
+      Itt a játékot a játék tesztelőivel tesztelik egyszerre ebbe a játékba olyan funkciók is bekerülnek, amelyek a végleges
+      frissítés során lehetséges, hogy kitörölnek, csak így ezen a teszten fel tudják mérni, hogy ez a változtatás szükséges-e
+      a játékba. Ezeket a játékosokat főként a valós játék profi játékosai közül válogatjuk ki.
+      <h3>UI tesztelése</h3>
+      <h4>Kezdőképernyő</h4> A kezdőképernyőn négy gomb található: New Game, Continue, Options, Exit. A New Game tesztelése
+      csak annyiból áll, hogy azt figyeljük, hogy amikor a gombra rányomunk, akkor a játék az új játék menüre váltson, ahol új
+      játékot hozhatunk létre.. A Continue tesztelésekor azt kell figyelnünk, hogy a gomb lenyomása után a continue menüre
+      váltson ahol a már megkezdett játékain listája van. Options gomb tesztelése során szintén azt teszteljük, hogy a gomb
+      lenyomása után az options menüre váltson át. Exit gomb tesztelése során az figyeljük, hogy a gomb lenyomása után a játék
+      bezáródik.
+      <br>New_Game menüpont három lehetőséget látunk új játék létrehozására a tesztelés menete a következő: Amikor
+      rákattintunk, valamelyik gombra akkor arra a helyre fogja menteni az új játékot és ez után az új játék elindul.
+      <br>Continue menüponton úgy szintén három lehetőséget látunk hasonlóan, mint a New_Game menüpontban csak itt a már
+      meglévő mentéseinket látjuk. Itt a tesztelés során azt figyeljük, hogy ha a már meglévő mentésre kattintunk, akkor az
+      elmentett játékot folytatjuk onnan ahol megállítottuk. Viszont ha üres részre kattintunk, akkor ne a New_Game menüpontra
+      vigyen át.
+      <h4>Options menüpont</h4> Ebben a menüpontban hat darab elemet kell tesztelnünk. A sound és a music mellett csúszkák
+      találhatóak a teszt során azt figyeljük, hogy e csúszkák mozgatása során a hangerő változik-e.
+      <h4>Texture resolution gomb tesztelése a következő:</h4> a gombra való rákattintás után ki kell választanunk, hogy
+      milyen legyen a textúra ennek változtatása esetén a textúra minőségének meg kell változnia. Ez egy lassabb folyamat
+      mivel mindegyik átállítás után el kell indítani a játékot és ott megnézni, hogy változik-e a textúra.
+      <h4>Vsync</h4> Tesztelése során a gomb lenyomása után meg kell nézni, hogy ha a gomb szerint, be van kapcsolva a vsync
+      akkor a játékban is be van kapcsolva, ha nincs bekapcsolva, akkor a játékban se legyen.
+      <h4>Windowed-Full Screen</h4> itt azt kell tesztelni, hogy amikor a kettő közül kiválasztjuk valamelyiket akkor a
+      windowed-nál akkor ablak formában fusson a játék full screen kiválasztása esetén pedig teljes képernyős formában fusson
+      a játék.
+      <h4>Resolution</h4> szöveg mellett a gombra kattintva kiválasztható hogy mekkora legyen, a felbontás a tesztelés
+      folyamán arra kell figyelni, hogy amikor a gombon változtatjuk a felbontást akkor a játék felbontása is változzon.
+      <h4>Save_1 menüpon</h4>amikor a New_Game menüpontban új játékot indítunk el, ezt menüpontot hozza fel. Itt öt darab gomb
+      található. Ha a campaign gombra rányomva egy új kampájt kell elindítania a játéknak. Survival gombra kattintva a
+      survival játék módot kell felhoznia. A Challenge gombra kattintva a kihívások menüpontot kell behoznia. A Shop gombra
+      kattintva pedig a boltot kell megnyitni. A Return gombra kattintva pedig az előző oldalra kell navigálnia a játéknak. A
+      tesztelés során azt ellenőrizzük, hogy ezek a gombok a megfelelő helyre navigálják-e a felhasználót.
+      <h4>Shop menüpont</h4>Bal oldalt a scrap gomb található, amely a scrapyard menüpontba navigálja a felhasználót jobb
+      oldalt a ship gomb, amely a shipyard-ra navigál tovább. Ezeknél a gomboknál azt teszteljük, hogy megfelelően átnavigál-e
+      a megadott pontra. Alul négy gomb található health kit, shield cell, magnetic aura mod és a DMG mod. A health kit a
+      hajónk életerejét növeli meg a shield cell, a hajónk pajzsát növeli meg, a magnetic aura mod pedig egy mágneses aurát
+      hozz létre a hajó köré, ami magához szippantja a tárgyakat és a DMG mod amely a hajónk sebzését növeli meg. Ezeknek a
+      tesztelése az alábbi, amikor valamelyiket megvásároljuk, akkor a költsége levonódik, a pénzünkből majd a játékba
+      visszalépve azt kell tapasztalnunk, hogy az adott erőforrás hozzá adódott a hajónk adataihoz/eszközeihez.
+      <h4>Shipyard menüpont</h4> Bal oldalt két gomb található a scrap gomb található, amely a scrapyard menüpontba navigálja
+      a felhasználót és shop gomb, amely a shop-ra navigál tovább. Jobb oldalon látható panel tetején két gomb található az
+      info és az inventory az info gombra kattintva információkat kell felhozni a játéknak. Az inventory gombra kattintva a
+      játéknak át kell navigálnia minket az inventory menüpontra. A primary, secondary és a mods-nál felszereléseket adhatunk
+      hozzá a hajónkhoz ennek a tesztelésének a folyamata a következő: A kiválasztott helyen a hajónkat felszereljük, ez után
+      elindítjuk a játékot és kipróbáljuk, hogy tényleg felkerült-e az eszköz a hajónkra amennyiben felkerült az eszköz és azt
+      a játékban használni is tudjuk megfelelően akkor a teszt sikeres lett és a játék ezen eleme működik. Alul található a
+      ships gomb, amelyre ha rákattintunk a ships menüpontra kell átnavigálnia.
+      <h4>Inventory menüpont</h4> három darab legördülő ablak található benne weapons, mods és augments. Ezek a legördülő
+      ablakok tárgyakat tartalmaznak, amelyekkel felszerelhetjük a hajónkat. A tesztelés menete: ha rákattintunk egy tárgyra,
+      akkor az a shipyard menüpontban felkerül a hajónkra és ezt a későbbiekben, a játékban képesek vagyunk használni akkor ez
+      a funkció, működik.
+      <h4>Ships menüpont</h4> a shipyard menüpont alján, amikor rákattintunk a ships gombra ennek az ablaknak kell felugrania
+      itt találhatóak a megvásárolható hajók. Amikor egy hajót megvásárlunk, akkor a játékbeli fizetőeszközünkből le kell
+      vonódnia az árának és hajónak meg kell jelennie a shipyardban. Ez után fontos letesztelni azt, hogy erre a hajóra is
+      fellehet-e szerelni az eszközöket, fellehet-e tölteni a pajzsát, életerejét és hogy meglehet a növelni a sebzését. Ezt
+      mindegyik megvásárolható hajóval le kell egyesével tesztelni.
+      <h4>Scrapyard menüpont</h4> Itt azokat a hajókat találhatjuk, amelyeket még fel kell szerelnünk. Bal oldalt két gombot
+      találunk a shop és a ship. A shop a shopra navigál a ship a shipyard menüpontra navigál. Ezek tesztelése csak annyi,
+      hogy megfigyeljük, hogy a gomb megnyomása után a megfelelő helyre navigál el minket a játék. A hajó testén, találhatóak
+      férőhelyek ahova azokat az elemeket rakhatjuk amivel a hajónkat fel szerelhetjük. Ennek a tesztelése a következő: a
+      kiválasztott helyre alkatrészt helyezünk, el majd a hajóval belépünk egy játékba abban az esetben, ha ez az alkatrész
+      megjelenik a játékban és használni tudjuk, akkor az működik. A menüpont alján található a scrapships gomb, amely egy
+      felugró ablakot hoz fel abban az esetben, ha ez a felugró ablak megjelenik, a gomb működik. A Scrapyard felugró ablakon
+      két hajót találhatunk, melyeket meg tudunk vásárolni és a hajók alatt egy info gombot. Tesztelés a következő: Ha
+      megveszünk, egy hajót akkor annak az árának le kell vonódnia a játékbeli pénzünkből és a hajónak meg kell jelennie a
+      scrapyardban. Az info gombra rákattintva a hajóról lévő információknak kell megjelennie.
+      <h4>Campaign menüpont</h4> Amikor új játékot hozunk létre és a campaign gombot választjuk, ez jelenik meg előttünk négy
+      darab képet látunk, amennyiben most kezdjük a játékot akkor ezek közül hármon lakattal. Ezek a képek, amikor
+      rákattintunk, el kell navigálniuk az adott pályára. Tesztelés a következő: Rá kell, kattintani a nem lelakatolt képre
+      ilyenkor el kell, indulni az adott pályának amennyiben egy lelakatoltra kattintunk, rá akkor semminek sem kell
+      történnie, hiszen addig a pályához még a végig játszás során nem értünk el. A későbbiekben is kell tesztelnünk ezen a
+      felületen ugyan is, ahogy haladunk előre a játékban úgy a már kijátszott pályákról le kell kerülnie a lakatnak és
+      onnantól azt a pályát is kilehet majd választani. Ezt csak úgy lehet tesztelni, hogy a z előbbi tesztelési folyamatot
+      megismételjük viszont a már feloldott pályákkal kiegészítve.
+      <h3>Fegyverek tesztelése</h3>
+      A fegyverek tesztelése az alábbi módon történik. A fegyvereket egyesével fel kell szerelni a hajóra, el kell indítani a
+      játékot és ki kell próbálni mindegyik ellenfél ellen, hogy megfelelően sebzi-e őket hogy működnek-e, a felszerelés után
+      megjelennek és a DMG mod felrakása után a sebzése növekszik-e. Ezt a tesztet minden fegyverrel el kell végezni minden
+      hajóval és mindegyik ellenfél ellen ezzel minden lehetséges kombinációt lefedve, amelynek köszönhetően az esetleges
+      hibák számát nagymértékben lecsökkentjük.
+      <br>Amit a fegyvereknek csinálni a kell a játék és a teszt során:
+      <br>Pewpew: Kis lövedékeknek kell elhagynia a hajót.
+      <br>Thranix Cannon: Egy szélesebb és hosszú lézersugárnak kell elhagynia a hajót.
+      <br>Spear Missile: Egy vékony lándzsa formájú lövedéknek kell elhagynia a hajót.
+      <br>Photon Flare: Egy nagy gömb alakú lövedéknek kell elhagynia a hajót.
+      <br>Homing missiles: Rakétáknak kell elhagynia a hajót, amelyeknek automatikusan, meg kell célozniuk a legközelebbi
+      ellen felett.
+      <br>Wraith Squadron: Két kis hajónak kell megjelennie a hajó mellett, amely az ellenséges hajókat, kezdik el lőnni.
+      <h3>Hajók tesztelése</h3>
+      Minden egyes hajóval végig kell vinni az egész játékot annak érdekében, hogy, leteszteljük, hogy minden egyes eseménynél
+      mindegyik hajó ugyan úgy reagáljon, ne akadjon meg a játék, csak azért mert másik hajót használ a játékos. Ezen kívül a
+      hajót különféle pontokon el kell találtatni az ellenségekkel, hogy, megtudjuk, hogy a hajót hitboxa jól működik ezzel
+      elkerülve azt a hibát, hogy a hajón egyszerűen átmenjenek a lövedékek. Ezt a tesztelést, hogy az adott elemet különféle
+      módokon el találunk ezt meg kell ismételnünk a különféle ellenségekkel és BOSSokkal is ugyanis a játékosoknak nem
+      tetszene és frusztráltnak érzenék magukat, ha azért veszítenének, a játékban vagy azért veszítenének egy BOSS ellen,
+      mert a lövedékeik átmennek az ellenfélen.
+      <br>Az egyik legfontosabb, amit le kell tesztelnünk az nem más, mint amit a játék során látunk a képernyőn. Így az
+      életcsík megfelelő működése, tehát ha eltalál egy ellenfél, akkor az elindul, lefele ha veszek, plusz életet az a csík
+      visszatöltődik és ez ugyan úgy igaz a pajzsra is. Itt oda kell figyelni, hogy ne csak látszatra, működjön a csík, hanem
+      ha a csíkról ténylegesen elfogy a játékos életereje, akkor a játékos veszít. Bal oldalt látszódik egy csík, amely azt
+      jelzi, hogy hol tartunk az adott pályán, és hogy mikor fogunk találkozni a BOSSal. Ennek a tesztelése csak annyi, hogy
+      oda kell figyelnünk, hogy amikor haladunk előrre a játékkal akkor a karakter jelölőnk is meg előre a csúszkán, és amikor
+      a csúszka szerint BOSShoz érünk akkor a játékban is akkor találkozzunk a BOSSal.
+      <h4>Drops</h4>Amikor egy ellenség elpusztul dropokat hagy maga után ezeket a játékos képes felszedni ezeknek a
+      tesztelése egyszerű meg kell figyelni, hogy amikor az adott tárgyat vagy pénzt kidobja az ellenfél és mi azt felvesszük
+      akkor vagy megnöveli a pénzünket vagy az inventoryba bekerül. Oda kell figyelni, hogy abban az esetben, ha csak,
+      elmegyünk mellette és nem vesszük, fel akkor a játékos nem kapja meg a dropott.
+      <h4>Scoreboard</h4> A Scoreboard tartalmazza különféle játékosok pontszámait. Ennek a tesztelésének folyamán oda kell
+      figyelni, hogy ha több pontot, érünk el, mint előttünk mások akkor a mi nevünk fentebb helyezkedjen el a ranglistán.
+      Abban az esetben, ha egyenlő pontszámmal rendelkezik két játékos, akkor ABC sorrendben helyezkedjenek el egymás alatt. A
+      scoreboard jobb oldalán található egy gomb rewiew amivel a többi játékos megtekintheti más játtékosok játékát, amelyben
+      azt a pontszámot érték el. Két felirat jelenhet meg a rewiew és az unavaliable. Abban az esetben, ha van róla videó a
+      rewiewnak kell megjelennie és abban az esetben, amikor nincs róla vvideó az unavailable feliratnak kell megjelennie.
+      Ennek tesztelése során csak rákell kattintani a gombra és ha a szövegnek megfelelő tartalom jelenik meg akkor ez a
+      funkció megfelelően működik.
+      
+    </div>
   </div>
 </body>
 </html>

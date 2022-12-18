@@ -1,58 +1,2167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Devsomnia H4</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="./style.css">
+  <title>Devsomnia H4</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./style2.css?n=2">
 </head>
+
 <body>
   <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="h1.html" style="color:black">H1</a></li>
-          <li><a href="h2.html" style="color:black">H2 </a></li>
-          <li><a href="h3.html" style="color:black">H3 </a></li>
-          <li><a href="h4.html" style="color:black">H4 </a></li>
-          <li><a href="h5.html" style="color:black">H5 </a></li>
-        </ul>	
-      </div>
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="h1.html" style="color:black">H1</a></li>
+        <li><a href="h2.html" style="color:black">H2 </a></li>
+        <li><a href="h3.html" style="color:black">H3 </a></li>
+        <li><a href="h4.html" style="color:black">H4 </a></li>
+        <li><a href="h5.html" style="color:black">H5 </a></li>
+        <li><a href="szotar.html" style="color:black">Szótár </a></li>
+        <li><a href="/~bordas7/Rendszertervezes.html" style="color:black">Rendszer tervezés</a></li>
+      </ul>
+    </div>
   </nav>
-  
-  <table class="table">
-    <H1>Csoport tagjai, struktúrája</H1>
-    <thead>
-      <tr>
-        <th>Tagok</th>
-        <th>Neptun</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bordás Milán</td>
-        <td>WJB0DC</td>
-      </tr>      
-      <tr>
-        <td>Kriston Ádám</td>
-        <td>SYQ7E2</td>
-      </tr>
-      <tr>
-        <td>Kamarás Erik</td>
-        <td>EN4B5K</td>
-      </tr>
-      <tr>
-        <td>Pogácsás Benedek</td>
-        <td>FM4Z3B</td>
-      </tr>
-      <tr>
-        <td>Bártfai Bálint</td>
-        <td>NWTTCA</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <div class="w3-container">
+    <table class="table">
+      <H1>Csoport tagjai, struktúrája</H1>
+      <thead>
+        <tr>
+          <th>Tagok</th>
+          <th>Neptun</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bordás Milán</td>
+          <td>WJB0DC</td>
+        </tr>
+        <tr>
+          <td>Kriston Ádám</td>
+          <td>SYQ7E2</td>
+        </tr>
+        <tr>
+          <td>Kamarás Erik</td>
+          <td>EN4B5K</td>
+        </tr>
+        <tr>
+          <td>Pogácsás Benedek</td>
+          <td>FM4Z3B</td>
+        </tr>
+        <tr>
+          <td>Bártfai Bálint</td>
+          <td>NWTTCA</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <H1>Tartalomjegyzék</H1>
+      <tbody>
+        <b><a href="#1">1. Bevezetés</a></b><BR>
+        <b><a href="#2">2. Kezdeti osztályok</a></b><BR>
+        <b><a href="#2.1" class="tab">2.1. Osztályok alap leírása</a></b><BR>
+        <b><a href="#3" >3. Movement alrendszer</a></b><BR>
+        <b><a href="#4" >4. Ingame mechanics alrendszer</a></b><BR>
+        <b><a href="#5" >5. UI alrendszer</a></b><BR>
+      </tbody>
+    </div>
+    <H1 id="1">1. Bevezetés</H1>
+    <div>
+      Az osztálydiagramok bemutatása
+      <br><a href="TeljesOsztalyDiagram.html" style="color:blue">A teljes osztálydiagram megtekinthető itt</a> (vektor grafikus)
+      <br><a href="/~bordas7/Rendszertervezes.html" style="color:blue">Rendszer tervezés dokumentum megtalálható itt</a></li>
+    </div>
+
+    <H1 id="2">2. Kezdeti osztályok</H1>
+    <div>
+      <H2 id="2.1">2.1. Osztályok alap leírása</H2>
+      <div>
+        <H4><b>Ship</b></H4>
+        <div>
+          Ezen osztály tartalmazza az alap adatait egy-egy hajónak. Ez az ősosztálya az ellenfelek hajóinak és a játékos
+          hajóinak az osztályainak.
+        </div>
+        <H4><b>ShipModel</b></H4>
+        <div>
+          Ebben az osztályban tároljuk le a hajóknak a modelljét, és sebességét (az adott hajóra jellemző dolgokat).
+        </div>
+        <H4><b>PlayerShip és EnemyShip</b></H4>
+        <div>
+          Ezen osztályok tartalmazzák az alap adatait egy-egy hajónak és csak az adott entitásra jellemző dolgokat. A
+          Ship osztály származtatottjai.
+        </div>
+        <H4><b>Weapon</b></H4>
+        <div>
+          Ebben az osztályban tároljuk le a fegyvereknek a jellemzőit, ezen osztály felelős a lövésért az ellenfelek és
+          a játékos esetében is.
+        </div>
+        <H4><b>Bullet</b></H4>
+        <div>
+          Ebben az osztályban tároljuk le a lövedékeknek a jellemzőit, ezen osztály felelős a lövedék mozgásáért, és a
+          célpont eltalálásáért.
+        </div>
+        <H4><b>WaveSpawner</b></H4>
+        <div>
+          Ez az osztály felelős az ellenfelek leidézéséért. Ez az osztály kezeli hogy miből mikor mennyi jön létre az
+          ellenfelekből.
+        </div>
+        <H4><b>Enemy</b></H4>
+        <div>
+          Ez az osztály felelős az ellenfelek mechanikájáért. Itt tároljuk a játék során jellemző adatait az adott
+          ellenfeleknek.
+        </div>
+        <H4><b>Boss</b></H4>
+        <div>
+          Ez az osztály felelős a bossok mechanikájáért. Az Enemy osztály leszármazottja, kiegészítve az adott boss
+          speciális tulajdonságaival
+        </div>
+        <H4><b>MovePattern</b></H4>
+        <div>
+          Ezen osztály segítségével tudjuk megmondani egy-egy ellenfélnek, hogy hova mozogjon, miközben életben van.
+        </div>
+        <H4><b>Vector</b></H4>
+        <div>
+          A koordinálás során felhasznált osztály, 2D-s vektort jelöl.
+        </div>
+        <H4><b>Player</b></H4>
+        <div>
+          Ez az osztály felelős a játékos mechanikájáért. Itt tároljuk a játék során felhasznált adatait a játékosnak.
+        </div>
+        <H4><b>PlayerInventory</b></H4>
+        <div>
+          Ez az osztály felelős a játékos által megszerzett dolgok tényleges tárolásáért.
+        </div>
+        <H4><b>PlayerMovement</b></H4>
+        <div>
+          Ezen osztály segítségével tudjuk a játékos mozgását kivitelezni.
+        </div>
+        <H4><b>EnemyMovement</b></H4>
+        <div>
+          Az ellenfelek mozgását megvalósító osztály
+        </div>
+        <H4><b>Shop</b></H4>
+        <div>
+          Ezen osztályon belül van megvalósítva a boltrendszer, tehát ezen keresztül tud a játékos bizonyos elemeket
+          megvenni.
+        </div>
+        <H4><b>Item</b></H4>
+        <div>
+          Ez az osztály az, amivel megvalósíthatjuk az adott elemeknek a Shop-ból való megvásárlását. A Shop ezeken
+          keresztül "adja el" az árukat.
+        </div>
+        <H4><b>Shipyard</b></H4>
+        <div>
+          Egy külön osztály a hajók megvásárlásához.
+        </div>
+        <H4><b>Scrapyard</b></H4>
+        <div>
+          Egy külön osztály az egyéb fejlesztések megvásárlásához.
+        </div>
+        <H4><b>Augment</b></H4>
+        <div>
+          Egy adott fejlesztés tényleges adatait tartalmazó osztály.
+        </div>
+        <H4><b>Mod</b></H4>
+        <div>
+          Egy kisebb fejlesztés tényleges adatait tartalmazó osztály.
+        </div>
+        <H4><b>Consumable</b></H4>
+        <div>
+          Ezen osztályban tároljuk a játékos által felhasználható fogyócikkeknek a mechanikáját, adatait.
+        </div>
+        <H4><b>Drop</b></H4>
+        <div>
+          Az ellenfelek halála után dobott tárgyakat itt érhetjük el. Alosztályok segítségével tudjuk az Enemy
+          osztályból "droppolni" az adott tárgyat.
+        </div>
+        <H4><b>MoneyDrop és ConsumableDrop</b></H4>
+        <div>
+          A tárgyak adatai, illetve a játékbeli kinezétük, amit dobhatnak az ellenfelek. Ezek felhasználásával tudunk a
+          PlayerInventory-hoz hozzáadni tárgyakat.
+        </div>
+        <H4><b>Button</b></H4>
+        <div>
+          Ezen osztály segítségével hozhatunk létre gombokat a UI-on. Ezen keresztül érhető el a gombnyomás során
+          keletkező mechanizmus.
+        </div>
+        <H4><b>Text</b></H4>
+        <div>
+          Ezen osztály segítségével hozhatunk létre szövegeket a UI-on.
+        </div>
+        <H4><b>IngameUI</b></H4>
+        <div>
+          A játékon belüli interfész adatai itt tárolandók.
+        </div>
+        <H4><b>BaseMenuUI</b></H4>
+        <div>
+          A legelső menünek az adatai és mechanikái itt tárolandók, ami fogadja a játékost.
+        </div>
+        <H4><b>NewGameUI</b></H4>
+        <div>
+          A BaseMenuUI NewGame gomb lenyomása után felhozott menünek az adatai vannak itt letárolva.
+        </div>
+        <H4><b>OptionsUI</b></H4>
+        <div>
+          A BaseMenuUI Options gomb lenyomása után felhozott menünek az adatai és mechanikái vannak itt letárolva.
+        </div>
+        <H4><b>ScoreBoardUI</b></H4>
+        <div>
+          A játékosok által elért legmagasabb pontoknak a megjelenítéséért felelős osztály.
+        </div>
+      </div>
+
+      <H2 id="2.2">2.2. Alrendszerek</H2>
+      <div>
+        <H4><b>UI alrendszer</b></H4>
+        <div>
+          Minden osztály ebbe tartozik, ami a grafika része.
+          <ul>
+            <li>ShipModel osztály</li>
+            <li>ScoreBoardUI osztály</li>
+            <li>IngameUI osztály</li>
+            <li>BaseMenuUI osztály</li>
+            <li>NewGameUI osztály</li>
+            <li>OptionsUI osztály</li>
+            <li>Button osztály</li>
+            <li>Text osztály</li>
+          </ul>
+        </div>
+
+        <H4><b>Ingame Mechanics alrendszer</b></H4>
+        <div>
+          Minden olyan osztály, amely a játékon belüli mechanikáért felelős
+          <ul>
+            <li>Ship osztály</li>
+            <li>Weapon osztály</li>
+            <li>Bullet osztály</li>
+            <li>Enemy osztály</li>
+            <li>WaveSpawner osztály</li>
+            <li>Player osztály</li>
+            <li>Shop osztály</li>
+            <li>Shipyard osztály</li>
+            <li>Scrapyard osztály</li>
+            <li>Augment osztály</li>
+            <li>Mod osztály</li>
+            <li>Cunsumable osztály</li>
+            <li>PlayerInventory osztály</li>
+            <li>Drop osztály</li>
+          </ul>
+        </div>
+
+        <H4><b>Movement alrendszer</b></H4>
+        <div>
+          Minden olyan osztály, amely a játékon belüli mozgásért felelős
+          <ul>
+            <li>Vector osztály</li>
+            <li>MovePattern osztály</li>
+            <li>PlayerMovement osztály</li>
+            <li>EnemyMovement osztály</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <H1 id="3">3. Movement alrendszer</H1>
+    <div>
+      <img src="H4-Movement.png" alt="Movement alrendszer">
+      <H2 id="3.1">3.1. Statikus modell</H2>
+      <div>
+        <H3 id="3.1.1">3.1.1. Kapcsolatok</H3>
+        <div>
+          <ul>
+            <li>PlayerMovement - Vector: a PlayerMovement felhasználja a Vector osztályt, de a Vector független tőle.
+              (asszociáció)</li>
+            <li>EnemyMovement - MovePattern: a EnemyMovement felhasználja a MovePattern osztályt, de a MovePattern
+              független tőle.
+              (asszociáció)</li>
+            <li>MovePattern - Vector: a MovePattern felhasználja a Vector osztályt, de a Vector független tőle.
+              (asszociáció)</li>
+          </ul>
+        </div>
+
+        <H3 id="3.1.2">3.1.2. Attribútumok azonosítása</H3>
+        <div>
+          <h5><b>Vector</b></h5>
+          <div>
+            Az egyik legfontosabb osztály, ebben tárolandó minden elemnek a pozicíója.
+            <ul>
+              <li>x: float típusú public adattag, a vektor x koordinátája.</li>
+              <li>y: float típusú public adattag, a vektor y koordinátája.</li>
+            </ul>
+          </div>
+          <h5><b>PlayerMovement</b></h5>
+          <div>
+            A játékos mozgását végző osztály.
+            <ul>
+              <li>position: Vector típusú adattag, a játékos pozícióját tárolja.</li>
+              <li>speed: float típusú adattag, a játékos sebességét tárolja.</li>
+            </ul>
+          </div>
+          <h5><b>MovePattern</b></h5>
+          <div>
+            Az ellenfelek mozgásának leírását végző osztály.
+            <ul>
+              <li>checkPoints: Vector tömb típusú adattag, az ellenfél pályájának a töréspontjait tárolja.</li>
+              <li>speed: float típusú adattag, az ellenfél sebességét tárolja.</li>
+            </ul>
+          </div>
+          <h5><b>EnemyMovement</b></h5>
+          <div>
+            Az ellenfelek mozgását végző osztály.
+            <ul>
+              <li>position: Vector típusú adattag, az ellenfél pozícióját tárolja.</li>
+              <li>speed: float típusú adattag, az ellenfél sebességét tárolja.</li>
+              <li>movePattern: MovePattern típusú adattag, az ellenfél által leírt pályát és az azon való mozgását
+                tárolja.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <H2 id="3.2">3.2. Dinamikus modell</H2>
+      <div>
+
+      </div>
+      <H2 id="3.3">3.3. Operációk azonosítása</H2>
+      <div>
+        <h5><b>Vector</b></h5>
+        <div>
+          <ul>
+            <li>Distance</li>
+          </ul>
+        </div>
+        <h5><b>PlayerMovement</b></h5>
+        <div>
+          <ul>
+            <li>Move</li>
+          </ul>
+        </div>
+        <h5><b>MovePattern</b></h5>
+        <div>
+          <ul>
+            <li>Move</li>
+            <li>MoveTowardsCheckPoint</li>
+          </ul>
+        </div>
+        <h5><b>EnemyMovement</b></h5>
+        <div>
+          <ul>
+            <li>Move</li>
+          </ul>
+        </div>
+      </div>
+      <H2 id="3.4">3.4. Osztályok részletes leírása</H2>
+      <div>
+        <H3 id="3.4.1">3.4.1 Vector</H3>
+        <div>
+          Felelőssége: minden pozícióhoz, irányhoz, mozgáshoz köthető feladatot ellásson.
+          <br>Attribútomok:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x</td>
+                <td>float</td>
+                <td>A vektor x koordinátája</td>
+              </tr>
+              <tr>
+                <td>y</td>
+                <td>float</td>
+                <td>A vektor y koordinátája</td>
+              </tr>
+            </tbody>
+          </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Distance()</td>
+                <td>Vector a,Vector b</td>
+                <td>Visszaadja akét vektor távolságát (float)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <H3 id="3.4.2">3.4.2 PlayerMovement</H3>
+        <div>
+          Felelőssége: a játékos mozgásának lebonyolítása
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>position</td>
+                <td>Vector</td>
+                <td>A játékos pozíciója</td>
+              </tr>
+              <tr>
+                <td>speed</td>
+                <td>float</td>
+                <td>A játékos hajójának sebessége</td>
+              </tr>
+            </tbody>
+          </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Move()</td>
+                <td>Vector where,float speed</td>
+                <td>Mozgatja a játékos hajóját a megadott pozíció felé</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <H3 id="3.4.3">3.4.3 EnemyMovement</H3>
+        <div>
+          Felelőssége: az ellenfél mozgásának lebonyolítása
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>position</td>
+                <td>Vector</td>
+                <td>Az ellenfél pozíciója</td>
+              </tr>
+              <tr>
+                <td>speed</td>
+                <td>float</td>
+                <td>Az ellenfél hajójának sebessége</td>
+              </tr>
+              <tr>
+                <td>movePattern</td>
+                <td>MovePattern</td>
+                <td>Az ellenfél mozgásának pályája, mozgását lebonyolító osztálya</td>
+              </tr>
+            </tbody>
+          </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Move()</td>
+                <td>-</td>
+                <td>Meghívja a MovePattern Move() metódusát</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <H3 id="3.4.4">3.4.4 MovePattern</H3>
+        <div>
+          Felelőssége: az ellenfél mozgásának mechanikáját írja le
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>checkPoints</td>
+                <td>Vector[] (tömb)</td>
+                <td>A pályának at öréspontjai</td>
+              </tr>
+              <tr>
+                <td>speed</td>
+                <td>float</td>
+                <td>Az ellenfél hajójának sebessége</td>
+              </tr>
+            </tbody>
+          </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Move()</td>
+                <td>-</td>
+                <td>Elkezdi az ellenfél mozgását a MoveTowardsCheckpoint() metódussal</td>
+              </tr>
+              <tr>
+                <td>MoveTowardsCheckpoint()</td>
+                <td>-</td>
+                <td>Egy adott mozgással mozgatja az ellenfél hajóját a következő checkPoint felé</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <H1 id="4">4. Ingame Mechanics alrendszer</H1>
+    <img src="H4-Ingame.png" alt="Ingame Mechanics alrendszer">
+      <H2 id="4.1">4.1. Statikus modell</H2>
+      <div>
+        <H3 id="4.1.1">4.1.1. Kapcsolatok</H3>
+        <div>
+          <ul>
+            <li>Ship: felhasználja a ShipModel osztályt de a Shipmodel független tőle. (asszociacíó)</li>
+            <li>PlayerShip: A Ship alosztály. Felhasználja az Augment, Mod,  Weapon osztályokat de ezek nem függenek tőle (asszociacíó)</li>
+            <li>EnemyShip: Felhasználja a MovementPattern osztály, a MovementPattern osztály nem függ tőle. (asszociacíó)</li>
+            <li>Enemy: EnemyShip,Drop osztályokat felhasználja az EnemyShip és Drop nem függ tőle (asszociacíó)</li>
+            <li>Boss: Enemy alosztálya (asszociacíó)</li>
+            <li>Player: Movement PlayerInventory Ship osztályokat használja és ezek nem függenek a Player osztálytól. (asszociacíó)</li>
+            <li>Shop Item osztályt használja. Az Item osztály nem függ a Shop osztálytól. (asszociacíó)</li>
+            <li>ShipYard: PlayerShip, Ship és Sprite osztályt használja. A Playership és Ship osztályal kölcsönös függésben van míg a Sprite független. (asszociacíó)</li>
+            <li>Scrapyard: Sprite és Augment osztályokat használja és nem függenek tőle. (asszociació)</li>
+            <li>PlayerInventory: Ship, Augment, Mod, Weapon, Consumable osztályokkal külcsönös függésben van. (asszociacíó)</li>
+            <li>ConsumableDrop és MoneyDrop: kölcsönös összefüggésben vannak a Drop osztállyal (asszociacíó)</li>
+            </ul>
+        </div>
+
+        <H3 id="4.1.2">4.1.2. Attribútumok azonosítása</H3>
+        <div>
+          <h5><b>Ship</b></h5>
+          <div>
+            <ul>
+              <li>hp: int tipusú public adattag. A hajó jelenlegi életét tárolja</li>
+              <li>shield: int tipusú public adattag. A hajó jelenlegi páncélját tárolja</li>
+              <li>shipModel: ShipModel tipusú public adattag. A hajó modelljét tárolja</li>
+              </ul>
+          </div>
+          <h5><b>PlayerShip</b></h5>
+          <div>
+            <ul>
+              <li>augments: Augment tipusú public adattag. A hajóba szerelt agumenteket tárolja</li>
+              <li>mods: Mod tipusú public adattag. A hajóba szerelt modokat tárolja</li>
+              <li>weapons: Weapon tipusú public adattag. A hajó fegyverzetét tárolja</li>
+              </ul>
+          </div>
+          <h5><b>EnemyShip</b></h5>
+          <div>
+            <ul>
+              <li>movementPattern: MovementPattern tipusú public adattag. Az ellenfél mozgását tárolja le</li>
+              </ul>
+          </div>
+          <h5><b>Weapon</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. A fegyver nevét tárolja.</li>
+              <li>dmg: int tipusú public adattag. A fegyver egy lövésének sebzését tárolja.</li>
+              <li>attackSpeed: float tipusú public adattag. A fegyver lövések közötti sebességét írja le és tárolja</li>
+              <li>bullet: int tipusú public adattag. Azt írja le hogy egy töltény hány ellenfélen tud átmenni.</li>
+              <li>numberOfBullets: int tipusú public adattag. Egyszerre kilőtt töltények számát tárolja.</li>
+              <li>playerWeapon: bool tipusú public adattag. Megmondja hogy a fegyver az a játékosé vagy az ellenfélé</li>
+              </ul>
+          </div>
+          <h5><b>Bullet</b></h5>
+          <div>
+            <ul>
+              <li>sprite: Sprite tipusú public adattag. A töltény képe.</li>
+              <li>dmg: float tipusú public adattag. A töltény sebzése.</li>
+              <li>pierce: int tipusú public adattag. Azt írja le hogy egy töltény hány ellenfélen tud átmenni.</li>
+              <li>speed: float tipusú public adattag. A töltény sebessége</li>
+              </ul>
+          </div>
+          <h5><b>Enemy</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. Az ellenfél neve</li>
+              <li>enemyShip: EnemyShip tipusú public adattag. Az ellenfél hajó adatai.</li>
+              <li>weapon: Weapon tipusú public adattag. Az ellenfél fegyvere</li>
+              <li>position: Vektor tipusú public adattag. Az ellenfél helyzete a képernyőn</li>
+              <li>drop: Drop tipusú public adattag. Az ellenfél által dobott tárgyak.</li>
+              <li>scorePoint: int tipusú public adattag. Az ellenfélért járó pont.</li>
+              </ul>
+          </div>
+          <h5><b>Boss</b></h5>
+          <div>
+            <ul>
+              <li>Ellenfél alosztálya.</li>
+              </ul>
+          </div>
+          <h5><b>WaveSpawner</b></h5>
+          <div>
+            <ul>
+              <li>info string tömb tipusú public adattag. Itt vannak megadva az ellenfelek  típusai száma érkezési helye </li>
+              <li>canSpawn bool tipusú public adattag. A hullámban idéz e jelenleg ellenfeleket.</li>
+              <li>won: bool tipusú public adattag. Nyert e a játékos</li>
+              <li>isTheGameRunning: bool tipusú public adattag. Vége van e a pályának.</li>
+              </ul>
+          </div>
+          <h5><b>Player</b></h5>
+          <div>
+            <ul>
+              <li>playerMovement: PlayerMovement tipusú public adattag. A játékos jelenlegi helyzetét írja le.</li>
+              <li>playerInventory: PlayerInventory tipusú public adattag. A játékos felszerelését tárolja.</li>
+              <li>playerShip: PlayerShip tipusú public adattag. A játékos jelenlegi hajóját tárolja.</li>
+              </ul>
+          </div>
+          <h5><b>Shop</b></h5>
+          <div>
+            <ul>
+              <li>items: Item tömb tipusú public adattag. Ez tárolja az összes megvehető tárgyat.</li>
+              <li>layout: sprite tömb tipusú public adattag. A Shop kinézetét tárolja</li>
+              </ul>
+          </div>
+          <h5><b>Shipyard</b></h5>
+          <div>
+            <ul>
+              <li>layout: sprite tömb tipusú public adattag. A Shipyard kinézetét tárolja</li>
+              <li>playerShip:  PlayerShip tipusú public adattag. A játékos jelenlegi hajóját tárolja</li>
+              <li>ships: Ship tömb tipusú public adattag. A megszerezhető hajókat tartalmazza.</li>
+              </ul>
+          </div>
+          <h5><b>Scrapyard</b></h5>
+          <div>
+            <ul>
+              <li>layout: Sprite tomb tipusú public adattag. A Scrapyard kinézetét tárolja</li>
+              <li>augmets: Augments tipusú public adattag. A megszerzett augmenteket tárolja.</li>
+              </ul>
+          </div>
+          <h5><b>ScrapShip</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. A Scrapship neve.</li>
+              <li>price: int tipusú public adattag. A Scrapship ára.</li>
+              <li>idInfo: string tipusú public adattag. A Scrapship-pel kapcsolatos információk</li>
+              </ul>
+          </div>
+          <h5><b>Augment</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. Az augment neve.</li>
+              <li>bonus: float tipusú public adattag. Az augmentum bónusz értéke</li>
+              <li>tier: int tipusú public adattag. Az augmentum szintje.</li>
+              </ul>
+          </div>
+          <h5><b>Mod</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. A mod neve</li>
+              <li>bonus var tipusú public adattag. A mod bónusza</li>
+              </ul>
+          </div>
+          <h5><b>Consumable</b></h5>
+          <div>
+            <ul>
+              <li>name: string tipusú public adattag. A felhasználható tárgy neve</li>
+              <li>effect: var tipusú public adattag. A felhasználható tárgy effektje.</li>
+              </ul>
+          </div>
+          <h5><b>PlayerInventory</b></h5>
+          <div>
+            <ul>
+              <li>ships: Ship tömb tipusú public adattag. A játékos hajói.</li>
+              <li>augments: Augment tömb tipusú public adattag. A játékos Augment-jei.</li>
+              <li>mods: Mod tömb tipusú public adattag. A játékos Modjai.</li>
+              <li>weapons: Weapon tömb tipusú public adattag. A játékos fegyverei.</li>
+              <li>money: float tipusú public adattag. A játékos pénze.</li>
+              <li>consumables: Consumable tömb tipusú public adattag. A játékos felhasználható tárgyai</li>
+              </ul>
+          </div>
+          <h5><b>Drop</b></h5>
+          <div>
+            <ul>
+              <li>moneyDrop: MoneyDrop tipusú public adattag. Az eshető pénz tulajdonságait tárolja</li>
+              <li>consumableDrop ConsumableDrop tipusú public adattag. Az eshető tárgyak tulajdonságait tárolja</li>
+              </ul>
+          </div>
+          <h5><b>MoneyDrop</b></h5>
+          <div>
+            <ul>
+              <li>value: float tipusú public adattag. Az eshető pénz mennyisége.</li>
+              <li>sprite: sprite tipusú public adattag. Az eshető pénz képe.</li>
+              <li>chance: float tipusú public adattag. Az esés esélye.</li>
+              </ul>
+          </div>
+          <h5><b>ConsumableDrop</b></h5>
+          <div>
+            <ul>
+              <li>amount: int tipusú public adattag. Az eshető tárgy mennyisége.</li>
+              <li>sprite: sprite tipusú public adattag. Az eshető tárgy képe.</li>
+              <li>chance: float tipusú public adattag. Az esés esélye.</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <H2 id="4.2">4.2. Dinamikus modell</H2>
+      <div>
+
+      </div>
+      <H2 id="4.3">4.3. Operációk azonosítása</H2>
+      <div>
+        <h5><b>Weapon</b></h5>
+        <div>
+          <ul>
+            <li>Shoot</li>
+          </ul>
+        </div>
+        <h5><b>Bullet</b></h5>
+        <div>
+          <ul>
+            <li>Move</li>
+            <li>Hit</li>
+            <li>Die</li>
+            </ul>
+        </div>
+        <h5><b>Enemy</b></h5>
+        <div>
+          <ul>
+            <li>TakeDamage</li>
+            <li>Die</li>
+          </ul>
+        </div>
+        <h5><b>Boss</b></h5>
+        <div>
+          <ul>
+            <li>DoSpecial</li>
+          </ul>
+        </div>
+        <h5><b>WaveSpawner</b></h5>
+        <div>
+          <ul>
+            <li>SpawnWave</li>
+            <li>EndGame</li>
+          </ul>
+        </div>
+        <h5><b>Player</b></h5>
+        <div>
+          <ul>
+            <li>Move</li>
+            <li>Shoot</li>
+            <li>AddItemToInventory</li>
+            <li>AddMoney</li>
+          </ul>
+        </div>
+        <h5><b>Shop</b></h5>
+        <div>
+          <ul>
+            <li>BuyItem</li>
+          </ul>
+        </div>
+        <h5><b>Shipyard</b></h5>
+        <div>
+          <ul>
+            <li>BuyShip</li>
+          </ul>
+        </div>
+        <h5><b>Scrapship</b></h5>
+        <div>
+          <ul>
+            <li>GetShipInfo</li>
+          </ul>
+        </div>
+        <h5><b>PlayerInvetory</b></h5>
+        <div>
+          <ul>
+            <li>AddItem</li>
+            <li>RemoveItem</li>
+            <li>AddMoney</li>
+          </ul>
+        </div>
+      </div>
+    <H2 id="4.4">4.4. Osztályok részletes leírása</H2>
+    <div>
+      <H3 id="4.4.1">4.4.1 Ship </H3>
+      <div>
+        Feladata a játékos és az ellenség hajóinak tulajdonságainak letárolása
+        <br>Attribútomok:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>hp</td>
+              <td>int</td>
+              <td>A hajó életereje</td>
+            </tr>
+            <tr>
+              <td>shield</td>
+              <td>int</td>
+              <td>A hajó pajzsa</td>
+            </tr>
+            <tr>
+              <td>shipModel</td>
+              <td>ShipModel</td>
+              <td>A hajó hitbox-a</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.2">4.4.2 PlayerShip </H3>
+      <div>
+        A Ship leszármaztatott osztálya, specifikusan a játékos hajója
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>augments</td>
+              <td>Augment tömb</td>
+              <td>A hajón használt augmentek</td>
+            </tr>
+            <tr>
+              <td>mods</td>
+              <td>Mod tömb</td>
+              <td>A hajón használt modok</td>
+            </tr>
+            <tr>
+              <td>weapons</td>
+              <td>Weapon tömb</td>
+              <td>A hajón használt fegyverek</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.3">4.4.3 EnemyShip</H3>
+      <div>
+        A Ship leszármaztatott osztálya, specifikusan az ellenfél hajója
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>movementPattern</td>
+              <td>movementPattern</td>
+              <td>Ellenség mozgása</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.4">4.4.4 Weapon</H3>
+      <div>
+        Feladata: a játékban szereplő fegyverek eltárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>A fegyver neve</td>
+            </tr>
+            <tr>
+              <td>dmg</td>
+              <td>int</td>
+              <td>A fegyver sebzése</td>
+            </tr>
+            <tr>
+              <td>attackSpeed</td>
+              <td>float</td>
+              <td>A fegyver lövési sebessége</td>
+            </tr>
+            <tr>
+              <td>bullet</td>
+              <td>int</td>
+              <td>A fegyver által használt lőszer</td>
+            </tr>
+            <tr>
+              <td>numberOfBullets</td>
+              <td>int</td>
+              <td>A fegyver által kilőtt lőszer</td>
+            </tr>
+            <tr>
+              <td>playerWeapon</td>
+              <td>bool</td>
+              <td>A fegyver a játékosé vagy sem</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shoot()</td>
+              <td>-</td>
+              <td>bulletsprite „kilövése”</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.5">4.4.5 Bullet</H3>
+      <div>
+        Feladata: a játékban szereplő fegyverek eltárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sprite</td>
+              <td>sprite</td>
+              <td>a lövedék kinézete</td>
+            </tr>
+            <tr>
+              <td>dmg</td>
+              <td>float</td>
+              <td>a lövedék sebzése</td>
+            </tr>
+            <tr>
+              <td>pierce</td>
+              <td>int</td>
+              <td>lövés ellenségeken való átmenetele</td>
+            </tr>
+            <tr>
+              <td>speed</td>
+              <td>float</td>
+              <td>lövés sebessége</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Müködés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Move()</td>
+              <td>vektor Target target</td>
+              <td>target felé mozgatja a bulletet</td>
+            </tr>
+            <tr>
+              <td>Hit()</td>
+              <td>Enemy enemy</td>
+              <td>Ellenfélnek sérülés okoz</td>
+            </tr>
+            <tr>
+              <td>Die()</td>
+              <td> </td>
+              <td>törli a bulletet</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.6">4.4.6 Enemy</H3>
+      <div>
+        Feladata: Az ellenfelek tuljadonságainak letárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>Az ellenfél neve</td>
+            </tr>
+            <tr>
+              <td>enemyShip</td>
+              <td>enemyShip</td>
+              <td>Az ellenfél hajója</td>
+            </tr>
+            <tr>
+              <td>weapon</td>
+              <td>weapon</td>
+              <td>Az ellenfél hajójának fegyvere</td>
+            </tr>
+            <tr>
+              <td>position</td>
+              <td>vector</td>
+              <td>Az ellenfél pozíciója</td>
+            </tr>
+            <tr>
+              <td>drop</td>
+              <td>drop</td>
+              <td>Mit ad halálakor</td>
+            </tr>
+            <tr>
+              <td>scorePoint</td>
+              <td>int</td>
+              <td>Mennyi pontot ad halálakor</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>TakeDamage()</td>
+              <td>float amount</td>
+              <td>Kiosztja a megfelelő sebzést</td>
+            </tr>
+            <tr>
+              <td>Die()</td>
+              <td> </td>
+              <td>Törli az ellenfelet a képernyőről</td>
+            </tr>
+            <tr>
+              <td>DropItems()</td>
+              <td> </td>
+              <td>Kidob valamilyen drop-ot</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.7">4.4.7 Boss</H3>
+      <div>
+        Feladata: A bossok mechanikáját valósítja meg
+        <br>Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Müködés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DoSpecial()</td>
+              <td> </td>
+              <td>Csinál egy speciális támadást</td>
+            </tr>
+          </tbody>
+        </table>
+        <br> Illetve minden az Enemy osztályból származtatott metódus, adattag.
+      </div>
+      <H3 id="4.4.8">4.4.8 WaveSpawner</H3>
+      <div>
+        Feladata: Megidézendő ellenfelek letárolása majd megjelenítése
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Info</td>
+              <td>string[]</td>
+              <td>Spawn informásciók – enemy, numberOfEnemy, spacing, timeBetween…</td>
+            </tr>
+            <tr>
+              <td>canSpawn</td>
+              <td>bool</td>
+              <td>Tud-e generálni</td>
+            </tr>
+            <tr>
+              <td>won</td>
+              <td>bool</td>
+              <td>Megnyerte e a játékos a kört</td>
+            </tr>
+            <tr>
+              <td>isTheGameRunning</td>
+              <td>bool</td>
+              <td>Fut-e a játék</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SpawnWaves()</td>
+              <td> </td>
+              <td>Megidézi azellenfél hullámot</td>
+            </tr>
+            <tr>
+              <td>EndGame()</td>
+              <td> </td>
+              <td>Befejezi apályát</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.9">4.4.9 Player </H3>
+      <div>
+        Feladata: a játékos adatainak letárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>playerMovement</td>
+              <td>Movement</td>
+              <td>A játékos mozgását megvalósító osztály</td>
+            </tr>
+            <tr>
+              <td>playerInventory</td>
+              <td>PlayerInventory</td>
+              <td>A játékos leltára</td>
+            </tr>
+            <tr>
+              <td>playerShip</td>
+              <td>Ship</td>
+              <td>A játékos hajója</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Move()</td>
+              <td>vector where</td>
+              <td>A játékoshajó oda mozog</td>
+            </tr>
+            <tr>
+              <td>Shoot()</td>
+              <td> </td>
+              <td>A játékoshajó lő</td>
+            </tr>
+            <tr>
+              <td>AddItemToInventory()</td>
+              <td>Consumableitem</td>
+              <td>Felhasználható tárgyat a játékos felszereléséhez adja</td>
+            </tr>
+            <tr>
+              <td>AddMoney()</td>
+              <td>float value</td>
+              <td>Hozzá ad a játékos pénzéhez</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.10">4.4.10 Shop </H3>
+      <div>
+        Feladata: a bolton belüli vásárlások lebonyolítása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Tipus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>items</td>
+              <td>item tömb</td>
+              <td>a megvehető tárgyak</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BuyItem()</td>
+              <td>Item item</td>
+              <td>megveszi a tárgyat a boltból</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.11">4.4.11 Shipyard</H3>
+      <div>
+        Feladata: a shipyard megjelenítése
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>layout</td>
+              <td>sprite tömb</td>
+              <td>A kinézete a shipyardnak</td>
+            </tr>
+            <tr>
+              <td>playerShip</td>
+              <td>playerShip</td>
+              <td>A játékos hajója</td>
+            </tr>
+            <tr>
+              <td>ships</td>
+              <td>ship tömb</td>
+              <td>Az elérhető hajók tömbje</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.12">4.4.12 Scrapyard </H3>
+      <div>
+        Feladata: a scrapyard megjelenítése és működtetése
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>layout</td>
+              <td>sprites tömb</td>
+              <td>A kinézete a Scrapyardnak</td>
+            </tr>
+            <tr>
+              <td>augments</td>
+              <td>augments tömb</td>
+              <td>Az elérhető Augmentek</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.13">4.4.13 Scrapship</H3>
+      <div>
+        Feladata: a scrapship-ek megjelenítése és megvásárlásának biztosítása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>A Scrapship neve</td>
+            </tr>
+            <tr>
+              <td>price</td>
+              <td>float</td>
+              <td>Az ára</td>
+            </tr>
+            <tr>
+              <td>idInfo</td>
+              <td>string</td>
+              <td>Hajó identifikáló értéke</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Működés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GetShipInfo()</td>
+              <td> </td>
+              <td>megjeleníti a Scrap hajó információit</td>
+            </tr>
+            <tr>
+              <td>BuyShip()</td>
+              <td>float value</td>
+              <td>megveszi a hajót és a rajta lévő augemnteket</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.14">4.4.14 Augment </H3>
+      <div>
+        Feladata: az Augment-ek tulajdonságainak tárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>Az augment neve</td>
+            </tr>
+            <tr>
+              <td>bonus</td>
+              <td>float</td>
+              <td>Az augment által nyújtott bónusz</td>
+            </tr>
+            <tr>
+              <td>tier</td>
+              <td>int</td>
+              <td>Az augment szintje</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.15">4.4.15 Mod </H3>
+      <div>
+        Feladata: a Modok tulajdonságainak tárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>A mod neve</td>
+            </tr>
+            <tr>
+              <td>bonus</td>
+              <td>string</td>
+              <td>A bónusz amit ad</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.16">4.4.16 Consumable </H3>
+      <div>
+        Feladata: a Consumable -ök tulajdonságainak tárolása
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>string</td>
+              <td>A consumable neve</td>
+            </tr>
+            <tr>
+              <td>effect</td>
+              <td>string</td>
+              <td>Az effektje</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.17">4.4.17 PlayerInventory </H3>
+      <div>
+        Feladata: a Játékos leltárának tárolása és a hozzá adás intézése
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ships</td>
+              <td>Ship tömb</td>
+              <td>A játékos hajói</td>
+            </tr>
+            <tr>
+              <td>augments</td>
+              <td>Augment tömb</td>
+              <td>A játékos augmentjei</td>
+            </tr>
+            <tr>
+              <td>mods</td>
+              <td>Mod tömb</td>
+              <td>A játékos modjai</td>
+            </tr>
+            <tr>
+              <td>weapons</td>
+              <td>Weapon tömb</td>
+              <td>A játékos fegyverei</td>
+            </tr>
+            <tr>
+              <td>money</td>
+              <td>float</td>
+              <td>A játékos pénze</td>
+            </tr>
+            <tr>
+              <td>consumables</td>
+              <td>Consumabletömb</td>
+              <td>A játékos consumable-jei</td>
+            </tr>
+          </tbody>
+        </table>
+        Operációk
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Müködés</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AddItem()</td>
+              <td>Consumableite</td>
+              <td>Hozzá ad egy Consumable-t</td>
+            </tr>
+            <tr>
+              <td>AddItem()</td>
+              <td>Ship item</td>
+              <td>Hozzá ad egy Ship-et</td>
+            </tr>
+            <tr>
+              <td>AddItem()</td>
+              <td>Augment item</td>
+              <td>Hozzá ad egy Augmentum-ot</td>
+            </tr>
+            <tr>
+              <td>AddItem()</td>
+              <td>Mod item</td>
+              <td>Hozzá ad egy Mod-ot</td>
+            </tr>
+            <tr>
+              <td>AddItem()</td>
+              <td>Weapon item</td>
+              <td>Hozzá ad egy Weapon-t</td>
+            </tr>
+            <tr>
+              <td>RemoveItem()</td>
+              <td>… item</td>
+              <td>Kiveszi az adott tárgyat</td>
+            </tr>
+            <tr>
+              <td>AddMoney</td>
+              <td>float value</td>
+              <td>Hozzá ad pénzt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.18">4.4.18 Drop </H3>
+      <div>
+        Feladata: a dobott tárgyak adatait tárolja
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>moneyDrop</td>
+              <td>MoneyDrop</td>
+              <td>A dobott pénz</td>
+            </tr>
+            <tr>
+              <td>consumableDrop</td>
+              <td>ConsumableDrop</td>
+              <td>A dobott consumable</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.19">4.4.19 MoneyDrop </H3>
+      <div>
+        Feladata: a dobott tárgyak közül a pénz
+        <br>Attribútomok
+
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>value</td>
+              <td>float</td>
+              <td>Mennyisége a pénznek</td>
+            </tr>
+            <tr>
+              <td>sprite</td>
+              <td>sprite</td>
+              <td>A dobott tárgy kinézete</td>
+            </tr>
+            <tr>
+              <td>chance</td>
+              <td>float</td>
+              <td>Esélye a dobásnak</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <H3 id="4.4.20">4.4.20 ConsumableDrop </H3>
+      <div>
+        Feladata: a dobott tárgyak közül a Consumable
+        <br>Attribútomok
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>amount</td>
+              <td>int</td>
+              <td>Mennyiség</td>
+            </tr>
+            <tr>
+              <td>sprite</td>
+              <td>sprite</td>
+              <td>A kinézete a tárgynak</td>
+            </tr>
+            <tr>
+              <td>chance</td>
+              <td>float</td>
+              <td>Esélye a dobásnak</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <H1 id="5">5. UI alrendszer</H1>
+    <div>
+      <img src="H4-UI.png" alt="UI alrendszer">
+      <H2 id="5.1">5.1. Statikus modell</H2>
+      <div>
+        <H3 id="5.1.1">5.1.1. Kapcsolatok</H3>
+        <div>
+        </div>
+
+        <H3 id="5.1.2">5.1.2. Attribútumok azonosítása</H3>
+        <div>
+          <h5><b>ShipModel</b></h5>
+          <div>
+            <ul>
+              <li>sprite: A sprite egy két domenziós kép amely egy nagyobb grafikus jelentetnek a része. A ship model sprite atribútuma az űrhajó felületéért felelős. </li>
+              <li>speed: A speed float adattípussal van megadva. Ebben a változóban van tárolva hogy az űrhajónak mekkora a sebessége.</li>
+            </ul>
+          </div>
+          <h5><b>ScoreBoardUI</b></h5>
+          <div>
+            <ul>
+              <li>rank:Text[] Ez tartalmazza a ranglétrán való feljebb jutásért kapott rangokat</li>
+              <li>names: Text[] A names tartalmazza játékosok neveit.</li>
+              <li>scores: Text[] A scores tartalmazza a játékosok által elért legmagasabb pontszámot a játékosokhoz párosítva.</li>
+              <li>titles: Text[] A pontszám tartónak a felhasználóneve.</li>
+              <li>builds: Text[] Az adott játékban megszerzett tárgyak és fejlesztések.</li>
+            </ul>
+          </div>
+          <h5><b>IngameUI</b></h5>
+          <div>
+            <ul>
+              <li>score:  Integer adattípusban tárolja az a felhasználó pontjait, amelyet a játék folyamán szerez, ez folyamatosan frissül, ahogy halad előre az aktuális pályán.</li>
+              <li>hp: int Integer adattípusban tárolja a játékos aktuális hp-ját (Health point) magyarul életpontokat. Ettől függ, hogy mikor veszt a játék során a felhasználó. Abban az esetben, ha eléri a nullát a játékos vesztett.</li>
+              <li>shield: int Integer adatípusban tárolja a játékos shield-ét magyarul pajzsát. Abban az esetben, ha a játékost találat éri először nem a hp-ból megy le az élete, hanem a shiled-ből(pajzsból) majd miután ez nullára csökken, utána kezd az életpontjaiból veszteni.</li>
+              <li>progressBar: sprite A progressBar azt mutatja, hogy az adott szinten a játékos már meddig jutott ezt az előre haladást a spriteok segítségével látjuk egy skálán.</li>
+              <li>overchargeBar: sprite Ez hasonló a progressBarhoz a túltöltöttséget egy skálán jelezi spriteok segítségével.</li>
+            </ul>
+          </div>
+          <h5><b>BaseMenuUI</b></h5>
+          <div>
+            <ul>
+              <li>gameNameText:Text A játék nevét tartalmazza text formátumban.</li>
+              <li>NewGameButton: Button Ez egy gomb, amely segítségével a játékos egy új játékba kezdhet bele az eddig pontjait nullázva és az életerejét és pajzsát maxra töltve.</li>
+              <li>continueButton: Button Abban az esetben, ha a játékosnak valami okból félbe kell hagynia a játékot ennek a segítségével később lehetősége van a játék folytatására onnan ahonnan abba hagyta.</li>
+              <li>optionsButton:Button Ennek a gombnak a lenyomása után feljön egy panel amelyben a felhasználók a játék alap beállításait képesek módosítani.</li>
+              <li>exitButton:Button Ez a gomb lehetővé teszi a játéból való kilépést ezzel bezárva a játékot.</li>
+            </ul>
+          </div>
+          <h5><b>NewGameUI</b></h5>
+          <div>
+            <ul>
+              <li>saves: Button[] A saves button-okat (gombokat) tartalmaz mellyel a régebbi mentéseinket tudjuk vissza tölteni.</li>
+              <li>CreateSaves() Ennek a segítségével mentéseket hozhatunk létre a játékban való adott álláspontunkról.</li>
+            </ul>
+          </div>
+          <h5><b>OptionsUI</b></h5>
+          <div>
+            <ul>
+              <li>soundText: Text A hang erőségét állítjuk be vele.</li>
+              <li>musicText: Text A zene erőségét állítjuk be vele ezt befolyásolja a hang erőssége.</li>
+              <li>resolutionText: Text</li>
+              <li>currentResolutionEnum: enum</li>
+              <li>textureResoltuionEnum: enum</li>
+              <li>currentTextuteResEnum: enum</li>
+              <li>vsyncText: Text Azt dönti el, hogy a vsync be van e kapcsolva vagy nem.</li>
+              <li>vsyncEnabled: bool Azt dönti el, hogy a vsync be van e kapcsolva vagy nem. Boolean típusban tehát vagy bevan kapcsolva vagy nincsen,</li>
+              <li>windowedText: Text : A windows méretét tudjuk vele megszabni.</li>
+              <li>currentWindowEnum: enum A windows méretét tudjuk vele megszabni. Az előre megadott típusok közül képesek vagyunk kiválasztani a windows méretét.</li>
+            </ul>
+          </div>
+          <h5><b>Button</b></h5>
+          <div>
+            <ul>
+              <li>sprite: Sprite A sprite egy kétdimenziós kép, amely egy nagyobb grafikus jelentetnek a része. A ship model sprite attribútuma az űrhajó felületéért felelős.</li>
+              <li>text: Text Text formátumban jelenik meg az objektum.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <H2 id="5.2">3.2. Dinamikus modell</H2>
+      <div>
+
+      </div>
+      <H2 id="5.3">3.3. Operációk azonosítása</H2>
+      <div>
+        <h5><b>BaseMenuUI </b></h5>
+        <div>
+          <ul>
+            <li>ExitGame</li>
+            <li>NewGame</li>
+            <li>Continute</li>
+            <li>NavigateToOptionas</li>
+          </ul>
+        </div>
+        <h5><b>NewGameUI</b></h5>
+        <div>
+          <ul>
+            <li>CreateSaves</li>
+          </ul>
+        </div>
+        <h5><b>Button </b></h5>
+        <div>
+          <ul>
+            <li>OnClick</li>
+          </ul>
+        </div>
+      </div>
+      <H2 id="5.4">5.4. Osztályok részletes leírása</H2>
+      <div>
+        <H3 id="5.4.1">5.4.1 ShipModel </H3>
+        <div>
+          <br>Attribútomok:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>sprite</td>
+                <td>Sprite</td>
+                <td>A sprite egy két domenziós kép amely egy nagyobb grafikusjelentetnek a része. A ship model sprite atribútuma az űrhajó felületéértfelelős.</td>
+              </tr>
+              <tr>
+                <td>speed</td>
+                <td>Float</td>
+                <td>A speed float adattípussal van megadva. Ebben a változóbanvan tárolva hogy az űrhajónak mekkora a sebessége.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+        <H3 id="5.4.2">5.4.2 ScoreBoardUI</H3>
+        <div>
+          <br>Attribútomok
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>rank</td>
+                <td>Text[]</td>
+                <td>Ez tartalmazza a ranglétrán való feljebb jutásért kapottrangokat</td>
+              </tr>
+              <tr>
+                <td>names</td>
+                <td>Text[]</td>
+                <td>A names tartalmazza játékosok neveit.</td>
+              </tr>
+              <tr>
+                <td>scores</td>
+                <td>Text[]</td>
+                <td>A scores tartalmazza a játékosok által elért legmagasabbpontszámot a játékosokhoz</td>
+              </tr>
+              <tr>
+                <td>titles</td>
+                <td>Text[]</td>
+                <td>A pontszám tartónak a felhasználóneve.</td>
+              </tr>
+              <tr>
+                <td>builds</td>
+                <td>Text[]</td>
+                <td>Az adott játékban megszerzett tárgyak és fejlesztések.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+        <H3 id="5.4.3">5.4.3 IngameUI</H3>
+        <div>
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>score</td>
+                <td>Integer</td>
+                <td>Integer adattípusban tárolja az a felhasználó pontjait,amelyet a játék folyamán szerez, ez folyamatosan frissül, ahogy halad előreaz aktuális pályán.</td>
+              </tr>
+              <tr>
+                <td>hp</td>
+                <td>Integer</td>
+                <td>Integer adattípusban tárolja a játékos aktuális hp-ját(Health point) magyarul életpontokat. Ettől függ, hogy mikor veszt a játéksorán a felhasználó. Abban az esetben, ha eléri a nullát a játékos vesztett.</td>
+              </tr>
+              <tr>
+                <td>shield</td>
+                <td>Integer</td>
+                <td>Integer adatípusban tárolja a játékos shield-ét magyarulpajzsát. Abban az esetben, ha a játékost találat éri először nem a hp-bólmegy le az élete, hanem a shiled-ből(pajzsból) majd miután ez nulláracsökken, utána kezd az életpontjaiból veszteni.</td>
+              </tr>
+              <tr>
+                <td>progressBar</td>
+                <td>Sprite</td>
+                <td>A progressBar azt mutatja, hogy az adott szinten a játékosmár meddig jutott ezt az előre haladást a spriteok segítségével látjuk egyskálán.</td>
+              </tr>
+              <tr>
+                <td>overchargeBar</td>
+                <td>Sprite</td>
+                <td>Ez hasonló a progressBarhoz a túltöltöttséget egy skálánjelezi spriteok segítségével.</td>
+              </tr>
+            </tbody>
+            </table>
+        <H3 id="5.4.4">5.4.4 BaseMenuUI </H3>
+        <div>
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>NewGameButton</td>
+                <td>Button</td>
+                <td>Ez egy gomb, amely segítségével a játékos egy új játékbakezdhet bele az eddig pontjait nullázva és az életerejét és pajzsát maxratöltve.</td>
+              </tr>
+              <tr>
+                <td>continueButton</td>
+                <td>Button</td>
+                <td>Button Abban az esetben, ha a játékosnak valami okbólfélbe kell hagynia a játékot ennek a segítségével később lehetősége van ajáték folytatására onnan ahonnan abba hagyta.</td>
+              </tr>
+              <tr>
+                <td>optionsButton</td>
+                <td>Button</td>
+                <td>Ennek a gombnak a lenyomása után feljön egy panel amelybena felhasználók a játék alap beállításait képesek módosítani.</td>
+              </tr>
+              <tr>
+                <td>exitButton</td>
+                <td>Button</td>
+                <td>Ez a gomb lehetővé teszi a játéból való kilépést ezzelbezárva a játékot.</td>
+              </tr>
+            </tbody>
+            </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ExitGame()</td>
+                <td>-</td>
+                <td>A játékból való kilépésre szolgál.</td>
+              </tr>
+              <tr>
+                <td>NewGame()</td>
+                <td>-</td>
+                <td>Új játék elkezdésére és létrehozására szolgál.</td>
+              </tr>
+              <tr>
+                <td>Continute()</td>
+                <td>-</td>
+                <td>A már meglévő játék folytatására szolgál az elmentettponttól.</td>
+              </tr>
+              <tr>
+                <td>NavigateToOptions()</td>
+                <td>-</td>
+                <td>A beállítások panel felhozására szolgál itt látszódnakhogy milyen lehetőségei vannak a felhasználóknak a beállítások módosítására.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+        <H3 id="5.4.5">5.4.5 BaseMenuUI </H3>
+        <div>
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>NewGameButton</td>
+                <td>Button</td>
+                <td>Ez egy gomb, amely segítségével a játékos egy új játékbakezdhet bele az eddig pontjait nullázva és az életerejét és pajzsát maxratöltve.</td>
+              </tr>
+              <tr>
+                <td>continueButton</td>
+                <td>Button</td>
+                <td>Button Abban az esetben, ha a játékosnak valami okbólfélbe kell hagynia a játékot ennek a segítségével később lehetősége van ajáték folytatására onnan ahonnan abba hagyta.</td>
+              </tr>
+              <tr>
+                <td>optionsButton</td>
+                <td>Button</td>
+                <td>Ennek a gombnak a lenyomása után feljön egy panel amelybena felhasználók a játék alap beállításait képesek módosítani.</td>
+              </tr>
+              <tr>
+                <td>exitButton</td>
+                <td>Button</td>
+                <td>Ez a gomb lehetővé teszi a játéból való kilépést ezzelbezárva a játékot.</td>
+              </tr>
+            </tbody>
+            </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ExitGame()</td>
+                <td>-</td>
+                <td>A játékból való kilépésre szolgál.</td>
+              </tr>
+              <tr>
+                <td>NewGame()</td>
+                <td>-</td>
+                <td>Új játék elkezdésére és létrehozására szolgál.</td>
+              </tr>
+              <tr>
+                <td>Continute()</td>
+                <td>-</td>
+                <td>A már meglévő játék folytatására szolgál az elmentettponttól.</td>
+              </tr>
+              <tr>
+                <td>NavigateToOptions()</td>
+                <td>-</td>
+                <td>A beállítások panel felhozására szolgál itt látszódnakhogy milyen lehetőségei vannak a felhasználóknak a beállítások módosítására.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+        <H3 id="5.4.6">5.4.6 NewGameUI </H3>
+        <div>
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>saves</td>
+                <td>Button[]</td>
+                <td>A saves button-okat (gombokat) tartalmaz mellyel a régebbimentéseinket tudjuk vissza tölteni.</td>
+              </tr>
+            </tbody>
+            </table>
+          Operációk:
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Argumentum</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CreateSaves()</td>
+                <td>-</td>
+                <td>Ennek a segítségével mentéseket hozhatunk létre a játékbanvaló adott álláspontunkról.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+        <H3 id="5.4.7">5.4.7 OptionsUI  </H3>
+        <div>
+          <br>Attribútomok
+
+          <table class="table3">
+            <thead>
+              <tr>
+                <th>Név</th>
+                <th>Típus</th>
+                <th>Leírás</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>soundText</td>
+                <td>Text</td>
+                <td>A hang erőségétállítjuk be vele.</td>
+              </tr>
+              <tr>
+                <td>musicText</td>
+                <td>Text</td>
+                <td>A zene erőségétállítjuk be vele ezt befolyásolja a hang erőssége.</td>
+              </tr>
+              <tr>
+                <td>resolutionText</td>
+                <td>Text</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>currentResolutionEnum</td>
+                <td>enum</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>textureResoltuionEnum</td>
+                <td>enum</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>currentTextuteResEnum</td>
+                <td>enum</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>vsyncText</td>
+                <td>Text</td>
+                <td>Azt dönti el, hogya vsync be van e kapcsolva vagy nem.</td>
+              </tr>
+              <tr>
+                <td>vsyncEnabled</td>
+                <td>bool</td>
+                <td>Azt dönti el, hogya vsync be van e kapcsolva vagy nem. Boolean típusban tehát vagy bevankapcsolva vagy nincsen,</td>
+              </tr>
+              <tr>
+                <td>windowedText</td>
+                <td>Text</td>
+                <td>A windows méretéttudjuk vele megszabni.</td>
+              </tr>
+              <tr>
+                <td>currentWindowEnum</td>
+                <td>enum</td>
+                <td>A windows méretéttudjuk vele megszabni. Az előre megadott típusok közül képesek vagyunkkiválasztani a windows méretét.</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+      </div>
+      <H3 id="5.4.8">5.4.8 Button </H3>
+      <div>
+        <br>Attribútomok
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Típus</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sprite</td>
+              <td>Sprite</td>
+              <td>A sprite egy kétdimenziós kép, amely egy nagyobb grafikusjelentetnek a része. A ship model sprite attribútuma az űrhajó felületéértfelelős.</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>Text</td>
+              <td>Text formátumban jelenik meg az objektum.</td>
+            </tr>
+          </tbody>
+          </table>
+        Operációk:
+        <table class="table3">
+          <thead>
+            <tr>
+              <th>Név</th>
+              <th>Argumentum</th>
+              <th>Leírás</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>OnClick()</td>
+              <td>-</td>
+              <td>Az OnClick parancs következtében klikkelés után a megadottutasítás végre hajtódik.</td>
+            </tr>
+          </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

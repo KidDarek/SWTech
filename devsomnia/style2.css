@@ -1,0 +1,85 @@
+body{
+    background-color: #F5F5DC;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.nav{
+    background-color: #98ff98;
+}
+
+.navbar{
+    background-color: #98ff98;
+}
+
+.table{
+    background-color: #b3ffb3;
+}
+.table2{
+    background-color: #b3ffb3;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 100%;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.table2 td{
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.table3{
+    background-color: #b3ffb3;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 100%;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.table3 thead tr th:nth-child(n){
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+.table3 tbody tr td:nth-child(n){
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+#palya-table tbody tr td:nth-child(n){
+    text-align: center;
+}
+#fegyverzet-table tr:nth-child(6n+1){
+    border-bottom: 2px solid;
+}
+#hajo-table tr:nth-child(1){
+    border-bottom: 2px solid;
+}
+#boss-table tr:nth-child(1){
+    border-bottom: 2px solid;
+}
+#ellenfel-table tr:nth-child(1){
+    border-bottom: 2px solid;
+}
+.info{
+    background-color: #b3ffb3;
+}
+.smalltab{
+    margin-left: 20px; 
+}
+.tab {  
+    margin-left: 40px; 
+}
+.tabtab{
+    margin-left: 60px; 
+}

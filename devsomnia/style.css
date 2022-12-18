@@ -1,7 +1,9 @@
 body{
     background-color: #F5F5DC;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
-
 .nav{
     background-color: #98ff98;
 }
@@ -13,11 +15,15 @@ body{
 .table{
     background-color: #b3ffb3;
 }
-
 .info{
     background-color: #b3ffb3;
 }
-
+.smalltab{
+    margin-left: 20px; 
+}
 .tab {  
     margin-left: 40px; 
+}
+.tabtab{
+    margin-left: 60px; 
 }

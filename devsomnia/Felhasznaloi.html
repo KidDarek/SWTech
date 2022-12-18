@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Devsomnia H5</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="h1.html" style="color:black">H1</a></li>
+            <li><a href="h2.html" style="color:black">H2 </a></li>
+            <li><a href="h3.html" style="color:black">H3 </a></li>
+            <li><a href="h4.html" style="color:black">H4 </a></li>
+            <li><a href="h5.html" style="color:black">H5 </a></li>
+            <li><a href="szotar.html" style="color:black">Szótár </a></li>
+            <li><a href="/~bordas7/Codes" style="color:black">C# kódok</a></li>
+          </ul>	
+        </div>
+    </nav>
+    <div class="w3-container">
+    <table class="table">
+      <H1>Csoport tagjai, struktúrája</H1>
+      <thead>
+        <tr>
+          <th>Tagok</th>
+          <th>Neptun</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bordás Milán</td>
+          <td>WJB0DC</td>
+        </tr>      
+        <tr>
+          <td>Kriston Ádám</td>
+          <td>SYQ7E2</td>
+        </tr>
+        <tr>
+          <td>Kamarás Erik</td>
+          <td>EN4B5K</td>
+        </tr>
+        <tr>
+          <td>Pogácsás Benedek</td>
+          <td>FM4Z3B</td>
+        </tr>
+        <tr>
+          <td>Bártfai Bálint</td>
+          <td>NWTTCA</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+        <H1>Tartalomjegyzék</H1>
+        <tbody>
+          <b><a href="#1">1. Bevezetés</a></b><BR>
+          <b><a href="#2">2. Billentyűk</a></b><BR>
+          <b><a href="#3">3. Ellenfelek</a></b><BR>
+          <b><a href="#4">4. Játékon belüli magyarázat</a></b><BR>
+          <b><a href="#5">5. Fegyverek</a></b><BR>
+        </tbody>
+      </div>
+    <H1 id="1">1. Bevezetés</H1>
+    <div>
+        A Devsomnia felhasználói dokumentációja
+        <br>Részletek, ami a játék megértéséhez szükséges.
+    </div>
+    <H1 id="2">2. Billentyűk</H1>
+    <div>
+        <table class="table2">
+            <tbody>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Fel&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>W vagy ↑&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Le&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>S vagy ↓&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Jobbra&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>D vagy →&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Balra&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>A vagy ←&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Lövés&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>SPACE&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>OverCharge&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>CTRL&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;&nbsp;&nbsp;<br>Játék&nbsp;&nbsp;&nbsp;megállítása / pause menu&nbsp;&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;<br>P vagy ESC&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+            </tbody>
+                </table>
+    </div>
+    <H1 id="3">3. Ellenfelek</H1>
+    <div>
+        A játék során több ellenfél is feltűnik. Mindegyiknek különböző ereje van, másfajta mozgásokkal, elhelyezkedésekkel, hullámokkal.
+        <br>Az ellenfelek ütközés során meghalnak, és 1 sebzést visznek be a játékosnak.
+        <br>Az ellenfeleknek különböző sebzésű fegyverük van, erről részletesebb leírás a táblázatban olvasható.
+        <table class="table2" id="ellenfel-table">
+            <tbody>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Name\Stats
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            Hp
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            Shield
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            Dmg
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            Attack
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            Special
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Maruder
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            20
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            0
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1 lövés játékos fele
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Stogy
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            35
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            0
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            2 lövés egyenesen lefele
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Yeb
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            80
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            0
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            egy nagy lövés ami hogyha sérül szétesik kisebbekre
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            N.Frigatte
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            150
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            30
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1+4 pörgő lövés
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Rouge. Infiltraitor
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            100
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            0
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            2
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            3 hőkövető lövés
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            50% élet elérésekor láthatatlan és sérthetetlen 1 mp-ig
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Maruder Prime
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            300
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            50
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            2
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            4 lézerkövetéses töltény
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Stogy Prime
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            500
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            200
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            2
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            1 rakéta játékos felé
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            -
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="101">
+                        <p align="center">
+                            Renegade
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            300
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            0
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            5
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            8 random lövés 70 kofos területen
+                        </p>
+                    </td>
+                    <td width="101">
+                        <p align="center">
+                            66% és 33% élet elérésekor láthatatlan és sérthetetlen 1
+                            mp-ig
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><img src="Enemies.PNG" alt="Enemies" style=width:800px>
+        <br>Az ellenfelek halálukkor tárgyakat dobhatnak. Ezeket a játékos fel tudja venni, ha a hajójával neki megy a tárgyaknak.
+        <br><img src="Drops.PNG" alt="Enemies" style=width:800px>
+        <br>A pénz felhasználható a boltokban, a pajzs és az életerő pedig rögtön hozzáadódik a játékos hajójához. Nincs túlcsordulás, tehát nem lehet több élete vagy pajzsa a játékosnak, mint amennyi a hajójának a maximuma.
+        <br>A lelőtt hajók megjelenhetnek a Scrapship boltban is.
+    </div>
+    <H1 id="4">4. Játékon belüli magyarázat</H1>
+    <div>
+        <img src="Game.PNG" alt="Enemies" style=width:800px>
+        <ol>
+            <li>Ellenfelek</li>
+            <li>„Progress bar”, csík, ami mutatja az adott pályán való előrehaladást</li>
+            <li>A játékos hajója</li>
+            <li>A játékos életereje</li>
+            <li>A játékos pajzsa</li>
+        </ol>
+    </div>
+    
+    <H1 id="5">5. Fegyverek</H1>
+    <div>
+        A fegyverek kinézete, tulajdonságai:
+        <table class="table2" id="fegyverzet-table">
+            <tbody>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Weapon
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    DMG
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Fire Rate
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Pierce
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Area
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Bullets
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Level / chapter
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Pew Pew
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" rowspan="6" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                  <p align="center">
+                    Chapter 1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Tharnix Cannon
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    ∞
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Homing Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    50
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    12
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Spear Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    35
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Photon Flare
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Wraith Squadron
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Pew Pew
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2/1
+                  </p>
+                </td>
+                <td width="86" rowspan="6" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                  <p align="center">
+                    Chapter 12
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Tharnix Cannon
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    6
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    ∞
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Homing Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    60
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    12
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Spear Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    40
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Photon Flare
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1+3
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Wraith Squadron
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Pew Pew
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    30
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    8
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3/2
+                  </p>
+                </td>
+                <td width="86" rowspan="6" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                  <p align="center">
+                    Chapter 26
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Tharnix Cannon
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    ∞
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    4
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Homing Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    99
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Spear Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    75
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    4
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    3
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Photon Flare
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    20
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    4
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1+3+9
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Wraith Squadron
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    30
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    8
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    4
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Pew Pew
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    30
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    14
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1,5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" rowspan="6" valign="top">
+                  <p align="center">
+                    Over Charged
+                  </p>
+                  <p align="center">
+                    Chapter 28
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Tharnix Cannon
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    16
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    ∞
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    5
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Homing Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    99
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    15
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    10+2
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Spear Missile
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    100
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    ∞
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    4
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    6
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Photon Flare
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    999
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    0
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Full screen
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    1
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td width="86" valign="top">
+                  <p align="center">
+                    Wraith Squadron
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    50
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    8
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    2
+                  </p>
+                </td>
+                <td width="86" valign="top">
+                  <p align="center">
+                    16
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <img src="Weapons.PNG" alt="Enemies" style=width:800px>
+    </div>
+
+
+</div>
+</body>
+</html>
